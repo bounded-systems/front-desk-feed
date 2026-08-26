@@ -1,0 +1,208 @@
+name: publish
+
+# Publish the public half of the Front Desk board as a signed snapshot.
+#
+# WHY THIS REPO AND NOT `.github`. The consumer pins trust with cosign's
+# --certificate-identity-regexp, and that regexp is only as narrow as the repo it
+# names. Signing from `.github` — 20-odd unrelated workflows — would ask a reader
+# to accept a feed signed by any of them. A repo that does one thing makes the
+# pinned identity mean something.
+#
+# WHY THE QUERY LIVES HERE rather than being imported from `.github-private`.
+# This repo is public BY NECESSITY: consumers fetch it anonymously, and a feed
+# nobody can audit is not meaningfully verifiable. Code that produces a signed
+# public artifact has to be readable by the people asked to trust the signature,
+# so the query and the filter are carried here in full rather than referenced
+# from a repo no consumer can open. The cost is two implementations that cannot
+# check each other — see scripts/README.md, which names the drift risk and the
+# one fact that bounds it.
+#
+# THE PRIVATE SNAPSHOT NEVER LEAVES THE RUNNER. The query returns the WHOLE
+# board, including private repos' issue titles; the filter runs on it in the same
+# step and only the filtered file is ever pushed. Two consequences this file is
+# careful about, because this repo's logs and job summaries are PUBLIC:
+#   - the step summary reports the PUBLIC feed's numbers only;
+#   - no step prints the private board's totals, not even in an error. The
+#     difference between the two counts is itself a private fact (it says how
+#     much work sits in private repos), which is exactly why the filter
+#     recomputes counts instead of carrying them through.
+on:
+  schedule:
+    # Hourly. Offset from :00 so this is not queued alongside every other org
+    # cron. Independent of `.github-private`'s projection lane — this queries the
+    # board itself, so a stalled lane there cannot silently stale this feed.
+    - cron: "35 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  # A parentless force-push is last-writer-wins, so two overlapping runs would
+  # race to publish different snapshots of the same board. Serialise instead.
+  group: publish-feed
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    # Declared in infra (github-admin/environments.tf) with a main-only
+    # deployment-branch policy. The feed this signs is what consumers trust, so
+    # the branch that can produce a signature is pinned the way the deploy gates
+    # are. An environment that does not exist does NOT fail loudly — it runs
+    # ungated — which is why it is declared there rather than assumed here.
+    environment: front-desk
+    permissions:
+      contents: write # push the snapshot branch (NOT a default branch — see below)
+      id-token: write # OIDC → cf-token-broker, and cosign keyless
+    steps:
+      - uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5.0.0
+
+      # THE FAILURE MUST NAME ITS CAUSE, and this fails rather than skipping. A
+      # quietly-skipped run makes a stale feed look like a healthy one, and the
+      # whole point of a dated snapshot is that consumers can tell those apart.
+      - name: Preflight — is the broker configured?
+        env:
+          BROKER_URL: ${{ vars.CF_BROKER_URL }}
+        run: |
+          if [ -z "${BROKER_URL:-}" ]; then
+            echo "::error title=Feed NOT published::CF_BROKER_URL is empty, so no token was minted and the feed is going stale. This is the org variable naming the cf-token-broker — not a secret. Fix at the org. Meanwhile consumers read an ageing snapshot; the reader-side age check is what stops them treating it as current."
+            exit 1
+          fi
+          echo "Broker configured; minting."
+
+      # `front-desk` is the one GH_APPS entry with no workflowRef pin —
+      # deliberately, it is the multi-repo fan-in, so any bounded-systems
+      # workflow may mint it. It carries organization_projects, which is all this
+      # lane needs; the push below uses the built-in GITHUB_TOKEN on this repo.
+      - name: Mint the Front Desk token via the OIDC broker
+        id: app-token
+        uses: bounded-systems/.github/.github/actions/broker-gh-token@d1b25e3bb48ba919f2af0f1ab83063a1d76d88d4 # broker-gh-token (prx-26bq), .github#109
+        with:
+          app: front-desk
+          broker-url: ${{ vars.CF_BROKER_URL }}
+
+      # ASSERT THE SCOPE BEFORE THE WORK, so a missing grant fails here naming
+      # the gap instead of erroring inside a GraphQL response. `read` is enough:
+      # this lane only reads the board.
+      - name: Assert the token carries organization_projects
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+        run: |
+          set -euo pipefail
+          granted="$(curl -sS -H "Authorization: bearer $GH_TOKEN" \
+            https://api.github.com/installation/repositories -D - -o /dev/null \
+            | tr -d '\r' | sed -n 's/^[Xx]-[Oo][Aa]uth-[Ss]copes: //p')" || true
+          # The installation endpoint does not report App permissions, so probe
+          # the board itself with the cheapest possible query instead: if the
+          # grant is missing this returns an error rather than a project id.
+          probe="$(curl -sS -X POST https://api.github.com/graphql \
+            -H "Authorization: bearer $GH_TOKEN" \
+            -d '{"query":"query{organization(login:\"bounded-systems\"){projectV2(number:2){id}}}"}')"
+          if ! printf '%s' "$probe" | jq -e '.data.organization.projectV2.id' >/dev/null 2>&1; then
+            echo "::error title=Feed NOT published::the minted token cannot read org project #2. The mint SUCCEEDED, so the App is registered and the OIDC trust holds — the gap is either the broker's GH_APPS entry for 'front-desk' not requesting Organization Projects, or the App installation not holding it. Check both."
+            printf '%s\n' "$probe" | jq -r '.errors[]?.message' >&2 || true
+            exit 1
+          fi
+          echo "organization_projects reachable."
+
+      - name: Project the board, then filter it to what may be published
+        env:
+          GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
+        run: |
+          # Explicit, because the redirect truncates the target BEFORE the script
+          # runs: without -e a failed projection would leave an empty file for the
+          # publish step to push as a board with nothing on it.
+          set -euo pipefail
+
+          # The full board. PRIVATE — it carries private repos' issue titles, and
+          # nothing below prints it, summarises it, or uploads it.
+          bash scripts/project.sh > /tmp/front-desk.json
+
+          # The publishable copy, derived from the SAME snapshot in the same run,
+          # so the two can never disagree about what the board said at a moment —
+          # a second query would be a second board.
+          bash scripts/public.sh < /tmp/front-desk.json > /tmp/front-desk-public.json
+
+          # Belt-and-braces: the filter is tested, but this run is the one that
+          # actually publishes, so assert the invariants against the REAL data.
+          # A private repo reaching the public file is the failure that cannot be
+          # allowed to be discovered later.
+          #
+          # Count parity, not a field check on the output: the public file strips
+          # `repo_private` by design, so asking it "are all your rows non-private"
+          # reads null on every row and fires on VALID output. Comparing against
+          # the source counts catches both over- and under-inclusion.
+          #
+          # NEITHER COUNT IS PRINTED. In the private lane this error names both
+          # numbers; here the logs are public and the delta between them is the
+          # private fact the filter exists to withhold. Diagnose from the private
+          # projection lane, which may safely say more.
+          want="$(jq '[.items[] | select(.repo != null and .repo_private == false)] | length' /tmp/front-desk.json)"
+          got="$(jq '.item_count' /tmp/front-desk-public.json)"
+          if [ "$want" != "$got" ]; then
+            echo "::error title=Feed NOT published::row-count parity failed between the snapshot and the filtered feed. Refusing to push. Diagnose from the private projection lane — the counts are deliberately not printed here." >&2
+            exit 1
+          fi
+          # …and the public file must carry no repo the snapshot marked private.
+          priv="$(jq -r '[.items[] | select(.repo_private == true) | .repo] | unique | join("|")' /tmp/front-desk.json)"
+          if [ -n "$priv" ] && jq -e --arg p "$priv" '[.items[] | select(.repo | test("^(" + $p + ")$"))] | length > 0' \
+               /tmp/front-desk-public.json >/dev/null 2>&1; then
+            echo "::error title=Feed NOT published::a repo the snapshot marked private appears in the filtered feed. Refusing to push." >&2
+            exit 1
+          fi
+
+          # PUBLIC NUMBERS ONLY — this summary is world-readable.
+          {
+            echo "## Front Desk public feed"
+            jq -r '"- generated_at: \(.generated_at)", "- items: \(.item_count)",
+                   (.counts | to_entries[] | "- \(.key): \(.value)")' /tmp/front-desk-public.json
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      # Keyless: the certificate binds the signature to THIS workflow's OIDC
+      # identity, so a consumer pins the repo + ref rather than holding a key.
+      # No secret exists to leak or rotate.
+      - uses: sigstore/cosign-installer@d58896d6a1865668819e1d91763c7751a165e159 # v3.9.2
+
+      - name: Sign the feed
+        run: |
+          set -euo pipefail
+          COSIGN_EXPERIMENTAL=1 cosign sign-blob --yes \
+            --output-signature /tmp/front-desk-public.json.sig \
+            --output-certificate /tmp/front-desk-public.json.pem \
+            /tmp/front-desk-public.json
+          sha256sum /tmp/front-desk-public.json | cut -d' ' -f1 > /tmp/front-desk-public.json.sha256
+          echo "signed; digest $(cat /tmp/front-desk-public.json.sha256)"
+
+      # PUSHED TO A DEDICATED BRANCH, NEVER TO A DEFAULT BRANCH. `main` stays
+      # under the one-change-one-PR rule; this is derived data whose source of
+      # truth is the board, so it does not belong in reviewed history.
+      #
+      # Built with plumbing as a PARENTLESS commit and force-pushed, so the
+      # branch is always exactly one commit holding the feed and its signature.
+      # An hourly cron appending to a normal branch would be ~8.7k commits a year
+      # of a file nobody reads the history of.
+      - name: Publish the feed branch
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          tree=""
+          for f in front-desk-public.json front-desk-public.json.sig \
+                   front-desk-public.json.pem front-desk-public.json.sha256; do
+            blob="$(git hash-object -w "/tmp/$f")"
+            tree="${tree}100644 blob ${blob}"$'\t'"${f}"$'\n'
+          done
+          t="$(printf '%s' "$tree" | git mktree)"
+          c="$(git commit-tree "$t" -m "Front Desk public feed $(jq -r .generated_at /tmp/front-desk-public.json)")"
+          git push --force origin "$c:refs/heads/feed"
+          echo "pushed $c → feed"
+
+          {
+            echo ""
+            echo "Fetch: \`https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/feed/front-desk-public.json\`"
+          } >> "$GITHUB_STEP_SUMMARY"
