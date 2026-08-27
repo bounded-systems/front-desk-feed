@@ -125,6 +125,12 @@ jobs:
           # a second query would be a second board.
           bash scripts/public.sh < /tmp/front-desk.json > /tmp/front-desk-public.json
 
+          # The PR feed, from the SAME snapshot (.github-private#713): public.sh
+          # stopped carrying PR rows (#480), so the open PRs publish separately
+          # for prs.bounded.tools — same run, same board, the feeds cannot
+          # disagree.
+          bash scripts/prs.sh < /tmp/front-desk.json > /tmp/front-desk-prs.json
+
           # Belt-and-braces: the filter is tested, but this run is the one that
           # actually publishes, so assert the invariants against the REAL data.
           # A private repo reaching the public file is the failure that cannot be
@@ -139,17 +145,34 @@ jobs:
           # numbers; here the logs are public and the delta between them is the
           # private fact the filter exists to withhold. Diagnose from the private
           # projection lane, which may safely say more.
-          want="$(jq '[.items[] | select(.repo != null and .repo_private == false)] | length' /tmp/front-desk.json)"
+          # PR rows are excluded from the desk feed by design (#480) — they
+          # ride front-desk-prs.json instead — so each feed's parity counts the
+          # rows its own filter is SUPPOSED to emit.
+          want="$(jq '[.items[] | select(.repo != null and .repo_private == false and .type != "PullRequest")] | length' /tmp/front-desk.json)"
           got="$(jq '.item_count' /tmp/front-desk-public.json)"
           if [ "$want" != "$got" ]; then
             echo "::error title=Feed NOT published::row-count parity failed between the snapshot and the filtered feed. Refusing to push. Diagnose from the private projection lane — the counts are deliberately not printed here." >&2
             exit 1
           fi
-          # …and the public file must carry no repo the snapshot marked private.
+          want_prs="$(jq '[.items[] | select(.repo != null and .repo_private == false and .type == "PullRequest" and .issue_state == "OPEN")] | length' /tmp/front-desk.json)"
+          got_prs="$(jq '.item_count' /tmp/front-desk-prs.json)"
+          if [ "$want_prs" != "$got_prs" ]; then
+            echo "::error title=Feed NOT published::row-count parity failed between the snapshot and the PR feed. Refusing to push. Diagnose from the private projection lane — the counts are deliberately not printed here." >&2
+            exit 1
+          fi
+          # …and neither public file may carry a repo the snapshot marked private.
           priv="$(jq -r '[.items[] | select(.repo_private == true) | .repo] | unique | join("|")' /tmp/front-desk.json)"
-          if [ -n "$priv" ] && jq -e --arg p "$priv" '[.items[] | select(.repo | test("^(" + $p + ")$"))] | length > 0' \
-               /tmp/front-desk-public.json >/dev/null 2>&1; then
-            echo "::error title=Feed NOT published::a repo the snapshot marked private appears in the filtered feed. Refusing to push." >&2
+          for f in /tmp/front-desk-public.json /tmp/front-desk-prs.json; do
+            if [ -n "$priv" ] && jq -e --arg p "$priv" '[.items[] | select(.repo | test("^(" + $p + ")$"))] | length > 0' \
+                 "$f" >/dev/null 2>&1; then
+              echo "::error title=Feed NOT published::a repo the snapshot marked private appears in $f. Refusing to push." >&2
+              exit 1
+            fi
+          done
+          # The desk feed must now carry no PR row at all — the exclusion is the
+          # feature, so its absence is asserted where the publish happens.
+          if [ "$(jq '[.items[] | select(.type == "PullRequest")] | length' /tmp/front-desk-public.json)" != "0" ]; then
+            echo "::error title=Feed NOT published::a PullRequest row reached the desk feed — PR rows belong to front-desk-prs.json (#480). Refusing to push." >&2
             exit 1
           fi
 
@@ -158,6 +181,8 @@ jobs:
             echo "## Front Desk public feed"
             jq -r '"- generated_at: \(.generated_at)", "- items: \(.item_count)",
                    (.counts | to_entries[] | "- \(.key): \(.value)")' /tmp/front-desk-public.json
+            echo "## Open PRs feed"
+            jq -r '"- open PRs: \(.item_count)"' /tmp/front-desk-prs.json
           } >> "$GITHUB_STEP_SUMMARY"
 
       # Keyless: the certificate binds the signature to THIS workflow's OIDC
@@ -165,15 +190,17 @@ jobs:
       # No secret exists to leak or rotate.
       - uses: sigstore/cosign-installer@d58896d6a1865668819e1d91763c7751a165e159 # v3.9.2
 
-      - name: Sign the feed
+      - name: Sign the feeds
         run: |
           set -euo pipefail
-          COSIGN_EXPERIMENTAL=1 cosign sign-blob --yes \
-            --output-signature /tmp/front-desk-public.json.sig \
-            --output-certificate /tmp/front-desk-public.json.pem \
-            /tmp/front-desk-public.json
-          sha256sum /tmp/front-desk-public.json | cut -d' ' -f1 > /tmp/front-desk-public.json.sha256
-          echo "signed; digest $(cat /tmp/front-desk-public.json.sha256)"
+          for f in /tmp/front-desk-public.json /tmp/front-desk-prs.json; do
+            COSIGN_EXPERIMENTAL=1 cosign sign-blob --yes \
+              --output-signature "$f.sig" \
+              --output-certificate "$f.pem" \
+              "$f"
+            sha256sum "$f" | cut -d' ' -f1 > "$f.sha256"
+            echo "signed $(basename "$f"); digest $(cat "$f.sha256")"
+          done
 
       # PUSHED TO A DEDICATED BRANCH, NEVER TO A DEFAULT BRANCH. `main` stays
       # under the one-change-one-PR rule; this is derived data whose source of
@@ -193,16 +220,19 @@ jobs:
 
           tree=""
           for f in front-desk-public.json front-desk-public.json.sig \
-                   front-desk-public.json.pem front-desk-public.json.sha256; do
+                   front-desk-public.json.pem front-desk-public.json.sha256 \
+                   front-desk-prs.json front-desk-prs.json.sig \
+                   front-desk-prs.json.pem front-desk-prs.json.sha256; do
             blob="$(git hash-object -w "/tmp/$f")"
             tree="${tree}100644 blob ${blob}"$'\t'"${f}"$'\n'
           done
           t="$(printf '%s' "$tree" | git mktree)"
-          c="$(git commit-tree "$t" -m "Front Desk public feed $(jq -r .generated_at /tmp/front-desk-public.json)")"
+          c="$(git commit-tree "$t" -m "Front Desk public + PR feeds $(jq -r .generated_at /tmp/front-desk-public.json)")"
           git push --force origin "$c:refs/heads/feed"
           echo "pushed $c → feed"
 
           {
             echo ""
             echo "Fetch: \`https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/feed/front-desk-public.json\`"
+            echo "PRs:   \`https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/feed/front-desk-prs.json\`"
           } >> "$GITHUB_STEP_SUMMARY"
