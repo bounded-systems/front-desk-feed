@@ -35,6 +35,14 @@
 # question a reader needs ("is someone on this?") without republishing a roster
 # of who is working on what.
 #
+# PR ROWS ARE NOT CARRIED EITHER (.github-private#480, maintainer direction
+# 2026-08-27). The desk is a queue of claimable work and a PR is not claimable
+# work — the desk Worker has excluded them from the ranking since it existed —
+# so they no longer ride this feed at all. Open PRs get their own feed instead:
+# scripts/prs.sh derives it from the SAME snapshot in the same run, and the
+# desk Worker serves it at prs.bounded.tools. The `pr_feed` field below is the
+# pointer a consumer follows.
+#
 # What this is NOT: a claim door, or any kind of authentication. It is a read
 # surface — a filtered copy of a ranking that the org already made.
 set -euo pipefail
@@ -47,11 +55,13 @@ jq '
     # made it is not auditable.
     feed: "front-desk-public",
     visibility_filter: "repo_private == false (default-deny)",
+    pr_feed: "front-desk-prs-public (prs.bounded.tools) — PR rows live there, not here",
     project: { org: .project.org, number: .project.number, title: .project.title },
     items: [
       .items[]
       | select(.repo != null)
       | select(.repo_private == false)
+      | select(.type != "PullRequest")
       | {
           repo: .repo,
           number: .number,
