@@ -27,12 +27,56 @@ name: publish
 #     much work sits in private repos), which is exactly why the filter
 #     recomputes counts instead of carrying them through.
 on:
+  # MEASURED, not assumed. On 2026-08-28 hooksmith#127 merged at 12:39Z, leaving
+  # the org with no open public PR, and prs.bounded.tools went on serving `3
+  # open` from a snapshot stamped 06:13:56Z until a hand dispatch republished it
+  # at 12:47:55Z. Between 06:35 and 12:35 the cron below had six slots and took
+  # none. GitHub runs scheduled workflows best-effort and drops slots under load,
+  # so a DENSER cron does not help — it is skipped more often. The only way this
+  # feed tracks reality is for something to say when reality changed. This is the
+  # same finding, and the same remedy, that `.github-private`#719 applied to its
+  # own projection lane; this lane simply never got it.
+  #
+  # THE PAYLOAD IS NOT READ, AND MUST NOT BE PRINTED. Every event produces the
+  # same whole-board reprojection, so there is nothing here to branch on. It is
+  # also not safe to echo: the sender fills `repo` from the delivery's
+  # `repository.full_name`, which is a PRIVATE repo's name whenever the App is
+  # installed on one — and this repo's job summaries and logs are world-readable
+  # (see the PUBLIC NUMBERS ONLY note at the publish step). The Actions page
+  # already names `repository_dispatch` as the trigger, which answers "why did
+  # this run" without carrying a name off the private side of the filter.
+  repository_dispatch:
+    types: [pr-activity]
   schedule:
-    # Hourly. Offset from :00 so this is not queued alongside every other org
-    # cron. Independent of `.github-private`'s projection lane — this queries the
+    # THE BACKSTOP, and it stays for exactly that. It is what recovers the feed
+    # if the App is down, uninstalled, or its dispatch credential lapses — the
+    # failure mode where nothing fires and the feed silently serves yesterday.
+    # Offset from :00 so this is not queued alongside every other org cron.
+    # Independent of `.github-private`'s projection lane — this queries the
     # board itself, so a stalled lane there cannot silently stale this feed.
     - cron: "35 * * * *"
   workflow_dispatch:
+
+# INERT UNTIL PROVISIONED (issue #3), and that is the honest state rather than a
+# half-finished one. This is the RECEIVING half of a four-link chain; the sending
+# half already exists in bounded.tools (`dispatchPrActivity`, disabled by empty
+# PR_DISPATCH_REPO/PR_DISPATCH_APP). Three links are still missing, and none of
+# them is code in this repo:
+#
+#   1. bs-door-hooks — the App behind hooks.bounded.tools — declares
+#      `default_events: ["workflow_run"]`, so no `pull_request` delivery ever
+#      reaches the receiver. Cheapest link, and the one nothing had named.
+#   2. bounded.tools sets PR_DISPATCH_REPO to this repo and PR_DISPATCH_APP to
+#      the door in 3. Either alone leaves the branch disabled.
+#   3. A broker binding-plane entry that can mint `contents: write` HERE — the
+#      permission `repository_dispatch` requires. `contents` is in the broker's
+#      PRIVILEGED_APP_PERMISSIONS, and the mint downscopes by permission, never
+#      by repository, so the grant must be bounded by the INSTALLATION: a door
+#      installed on this repo alone. Pointing the dispatch here rather than at
+#      `.github-private` is what makes that ask small enough to consider.
+#
+# Adding the trigger now is deliberate: it is this repo's own half, it is a no-op
+# until an event arrives, and it means link 4 is not what anyone is waiting on.
 
 permissions:
   contents: read
