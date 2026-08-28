@@ -45,8 +45,32 @@ on:
   # (see the PUBLIC NUMBERS ONLY note at the publish step). The Actions page
   # already names `repository_dispatch` as the trigger, which answers "why did
   # this run" without carrying a name off the private side of the filter.
+  #
+  # `claim-activity` is the SAME REMEDY FOR A SECOND EVENT (#5). A claim is
+  # written and removed by the claim doors — claim-ticket.yml in
+  # bounded-systems/.github, and _claim.yml for the relay — as a `claimed` label
+  # plus a comment. None of that is PR activity, so before this type existed a
+  # claim change notified this lane through no path at all, inert or otherwise,
+  # and claims.bounded.tools waited on the cron below.
+  #
+  # Measured 2026-08-28: seven stale claims were released and one issue closed
+  # between ~21:20Z and ~21:35Z, and this feed went on listing all seven as live
+  # work — including one already closed and merged — from a snapshot stamped
+  # 18:55:58Z, until a hand dispatch at 22:38Z. Nearly four hours on an hourly
+  # lane. The page reported its age honestly throughout; it had nothing newer.
+  #
+  # A NOTE FOR ANYONE REACHING FOR THE OTHER LEVER: dispatching
+  # `.github-private`'s front-desk-projection.yml does NOT refresh this feed.
+  # That lane publishes to `.github-private:front-desk-public` — different repo,
+  # different branch — and this one queries the board itself, deliberately
+  # independent of it (see the cron note below). Verified the same day: a
+  # projection dispatch updated that branch at 22:25:11Z and left this feed
+  # untouched.
+  #
+  # Both types do the identical thing, which is why they share one list rather
+  # than branching: every event produces the same whole-board reprojection.
   repository_dispatch:
-    types: [pr-activity]
+    types: [pr-activity, claim-activity]
   schedule:
     # THE BACKSTOP, and it stays for exactly that. It is what recovers the feed
     # if the App is down, uninstalled, or its dispatch credential lapses — the
@@ -57,11 +81,16 @@ on:
     - cron: "35 * * * *"
   workflow_dispatch:
 
-# INERT UNTIL PROVISIONED (issue #3), and that is the honest state rather than a
-# half-finished one. This is the RECEIVING half of a four-link chain; the sending
-# half already exists in bounded.tools (`dispatchPrActivity`, disabled by empty
-# PR_DISPATCH_REPO/PR_DISPATCH_APP). Three links are still missing, and none of
-# them is code in this repo:
+# INERT UNTIL PROVISIONED (issues #3 and #5), and that is the honest state rather
+# than a half-finished one. This is the RECEIVING half; for `pr-activity` the
+# sending half already exists in bounded.tools (`dispatchPrActivity`, disabled by
+# empty PR_DISPATCH_REPO/PR_DISPATCH_APP), and for `claim-activity` no sender
+# exists yet at all — the claim doors are the natural one, since they are the
+# only things that know a claim changed and they already run on every claim
+# (#5). Adding the second type does NOT make the credential ask below any
+# bigger: one binding-plane entry serves both events.
+#
+# Three links are still missing, and none of them is code in this repo:
 #
 #   1. bs-door-hooks — the App behind hooks.bounded.tools — declares
 #      `default_events: ["workflow_run"]`, so no `pull_request` delivery ever
