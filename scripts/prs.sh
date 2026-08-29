@@ -19,9 +19,26 @@
 # the board carries thousands of those.
 #
 # FIELDS ARE ALLOWLISTED. `assignees` is not carried (same reasoning as
-# public.sh: `claimed` answers the only public question), `fields` (board
-# Status/Score) is not carried — this feed lists changes awaiting a check, it
-# does not rank them; ranking is the desk's job and PRs are not on the desk.
+# public.sh), `fields` (board Status/Score) is not carried — this feed lists
+# changes awaiting a check, it does not rank them; ranking is the desk's job and
+# PRs are not on the desk.
+#
+# `claimed` IS 0 BY CONSTRUCTION, AND IS KEPT ONLY UNTIL THE DESK STOPS READING
+# IT (#7). For a PR row the board's `claimed` is the `claimed` label or an
+# assignee ON THE PULL REQUEST — and the claim convention never writes a claim
+# onto a PR; both doors write onto an ISSUE. So it can never be true, and
+# prs.bounded.tools has been rendering a count that cannot be non-zero as though
+# it were measured. `desk`#15 switches the page to `claim_check`; dropping this
+# field is the separate change after that, because the two repos deploy
+# independently and removing it first blanks the page in between.
+#
+# `claim_check` IS the question that field was reaching for: the verdict of the
+# `pr-claim` gate (`.github-private`#723) — does this PR name an issue carrying a
+# live claim. Added upstream by pr-claim.sh, which reads the CHECK RUN and never
+# opens an issue, so no issue title, number or claimant can reach this filter to
+# be published. Allowlisted key by key below all the same: if that object ever
+# grows a field that DOES name an issue, it must not ride in on a `claim_check`
+# nobody re-read.
 set -euo pipefail
 
 jq '
@@ -42,9 +59,19 @@ jq '
           title: .title,
           url: .url,
           labels: .labels,
-          claimed: .claimed
+          claimed: .claimed,
+          claim_check: { state: (.claim_check.state // "unknown"),
+                         conclusion: .claim_check.conclusion,
+                         url: .claim_check.url }
         }
     ]
   }
   | .item_count = (.items | length)
+  # Recomputed over the FILTERED set, never carried through from the snapshot —
+  # the rule scripts/README.md says must not be relaxed. Snapshot totals
+  # cover private rows, and the delta between the two is itself a private fact.
+  | .claim_counts = ( (.items | map(.claim_check.state) | group_by(.)
+                       | map({ (.[0]): length }) | add // {}) as $seen
+                      | { compliant: 0, non_compliant: 0, not_measured: 0,
+                          pending: 0, unknown: 0 } + $seen )
 '

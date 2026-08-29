@@ -1,0 +1,54 @@
+name: test
+
+# PR CHECKS FOR A SIGNED-FEED PRODUCER, which this repo did not have (#7).
+#
+# Until now the only workflow here was `publish.yml`, so a change to `prs.sh`,
+# `public.sh` or `project.sh` merged with ZERO checks and was first exercised by
+# the run that published a signed artifact from it. `scripts/README.md` bounds
+# drift with the publish lane's parity and default-deny asserts — but those fire
+# at PUBLISH time, which is after the merge and after the signature.
+#
+# That is the wrong place for the only check. This repo is public BY NECESSITY
+# so consumers can audit the code behind the signature; code nobody verifies
+# before it ships is a weaker version of the same problem.
+#
+# Deliberately small: lint every script, run every `*.test.sh`. No network, no
+# token, no board query — the fixtures are the point, and a test lane that
+# needed a credential would not run on a fork's PR.
+
+on:
+  pull_request:
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  scripts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5.0.0
+
+      # ubuntu-latest ships shellcheck; pinning a version here would be a second
+      # thing to keep current for no gain, since the finding set that matters
+      # (quoting, unset vars) is stable.
+      - name: shellcheck
+        run: shellcheck -S warning scripts/*.sh
+
+      # FAIL IF THE GLOB MATCHES NOTHING. A test lane that silently runs zero
+      # tests is the failure shape this org keeps finding: green, and measuring
+      # nothing. Same rule `.github-private`'s _workflow-lint.yml applies to its
+      # own extracted-script lane.
+      - name: run the script tests
+        run: |
+          set -euo pipefail
+          shopt -s nullglob
+          tests=(scripts/*.test.sh)
+          if [ "${#tests[@]}" -eq 0 ]; then
+            echo "::error title=No tests ran::scripts/*.test.sh matched nothing — refusing to report success." >&2
+            exit 1
+          fi
+          for t in "${tests[@]}"; do
+            echo "── $t"
+            bash "$t"
+          done

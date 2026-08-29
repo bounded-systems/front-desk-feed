@@ -198,6 +198,24 @@ jobs:
           # a second query would be a second board.
           bash scripts/public.sh < /tmp/front-desk.json > /tmp/front-desk-public.json
 
+          # The `pr-claim` verdict per PUBLIC open PR (#7), joined onto the
+          # snapshot before the PR filter runs. Reads the CHECK RUN and never an
+          # issue, so no issue title, number or claimant can enter this lane at
+          # all. Public rows only — the private half is never even requested.
+          #
+          # NON-FATAL BY DESIGN, and the distinction matters here: the parity
+          # asserts below decide whether the feed is COMPLETE and must fail the
+          # run; this decides only how much is KNOWN about rows already in it, so
+          # a row it could not reach becomes `unknown` rather than stopping a
+          # publish. Still `set -e`-safe: a hard failure of the script itself
+          # (not of one row) would leave the file empty, so it is written through
+          # a temp and only moved into place on success.
+          if bash scripts/pr-claim.sh < /tmp/front-desk.json > /tmp/front-desk-enriched.json; then
+            mv /tmp/front-desk-enriched.json /tmp/front-desk.json
+          else
+            echo "::warning title=claim verdicts unavailable::publishing the PR feed with claim_check=unknown on every row."
+          fi
+
           # The PR feed, from the SAME snapshot (.github-private#713): public.sh
           # stopped carrying PR rows (#480), so the open PRs publish separately
           # for prs.bounded.tools — same run, same board, the feeds cannot
@@ -234,6 +252,18 @@ jobs:
             exit 1
           fi
           # …and neither public file may carry a repo the snapshot marked private.
+          # …and `claim_check` may carry only the three allowlisted keys. The
+          # filter allowlists them and a unit test pins it against a fixture;
+          # this pins the REAL data, so an upstream object that starts carrying
+          # an issue title is caught on the run that would have published it.
+          extra="$(jq -r '[.items[].claim_check // {} | keys[]] | unique
+                          | map(select(. != "state" and . != "conclusion" and . != "url"))
+                          | join(",")' /tmp/front-desk-prs.json)"
+          if [ -n "$extra" ]; then
+            echo "::error title=Feed NOT published::claim_check carries unallowlisted key(s): ${extra}. Refusing to push." >&2
+            exit 1
+          fi
+
           priv="$(jq -r '[.items[] | select(.repo_private == true) | .repo] | unique | join("|")' /tmp/front-desk.json)"
           for f in /tmp/front-desk-public.json /tmp/front-desk-prs.json; do
             if [ -n "$priv" ] && jq -e --arg p "$priv" '[.items[] | select(.repo | test("^(" + $p + ")$"))] | length > 0' \
