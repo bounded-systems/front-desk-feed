@@ -67,10 +67,38 @@ on:
   # projection dispatch updated that branch at 22:25:11Z and left this feed
   # untouched.
   #
-  # Both types do the identical thing, which is why they share one list rather
-  # than branching: every event produces the same whole-board reprojection.
+  # `board-changed` is the SAME REMEDY FOR A THIRD EVENT, and the one the other
+  # two cannot cover between them. A card moved on org project #2 — a Status
+  # drag, a Score edit — is neither PR activity nor a claim, so it reached this
+  # lane through no path at all: the board's own RANKING changed and this feed
+  # went on serving the previous cron's ranks. And the note above is exactly why
+  # the type has to be delivered HERE rather than to the private projection
+  # lane: this workflow queries the board itself, so nothing that wakes
+  # `.github-private` wakes it.
+  #
+  # Measured 2026-08-30: the board projection updated at 22:52 and
+  # desk.bounded.tools was still rendering the 21:25 snapshot — a full cron slot
+  # behind, and by construction up to an hour. That was merely stale until desk
+  # gained Web Push. It now sends a payload-less push on a board change and the
+  # service worker fetches the board to learn what the push was about, so an
+  # unwoken feed turns a stale page into a wrong notification: it says the board
+  # changed and hands the reader a board that has not. Worse than not notifying.
+  #
+  # THE BURST IS BOUNDED BY `concurrency:` BELOW, not by anything here.
+  # `projects_v2_item` fires per field edit, so a scoring pass over the board is
+  # dozens of events in a minute — but GitHub's documented behaviour for a
+  # concurrency group (NOT measured here, so treat it as the doc's claim) is one
+  # run in flight plus at most one pending, each newly queued run cancelling the
+  # pending one it supersedes. Superseding a pending whole-board reprojection
+  # costs nothing: the run that replaces it reads the same board, later. That is
+  # also why `cancel-in-progress` stays false — cancelling the RUNNING one would
+  # throw away a signing job to redo it identically.
+  #
+  # All three types do the identical thing, which is why they share one list
+  # rather than branching: every event produces the same whole-board
+  # reprojection.
   repository_dispatch:
-    types: [pr-activity, claim-activity]
+    types: [pr-activity, claim-activity, board-changed]
   schedule:
     # THE BACKSTOP, and it stays for exactly that. It is what recovers the feed
     # if the App is down, uninstalled, or its dispatch credential lapses — the
@@ -88,7 +116,17 @@ on:
 # exists yet at all — the claim doors are the natural one, since they are the
 # only things that know a claim changed and they already run on every claim
 # (#5). Adding the second type does NOT make the credential ask below any
-# bigger: one binding-plane entry serves both events.
+# bigger: one binding-plane entry serves all three events.
+#
+# THAT DESCRIPTION OF THE SENDER IS NOW OUT OF DATE and is left standing only
+# because the links below are what still gate this lane. bounded.tools#43
+# replaced the disabled `dispatchPrActivity` branch with a real sender
+# (src/dispatch-events.ts, wired in src/worker.ts), which fans out all three of
+# the types above from one webhook receiver — so "no sender exists" is true of
+# none of them now. What is still unverified from this repo is whether the App
+# delivers the events at all (link 1) and whether the broker will mint
+# `contents: write` here (link 3); those, not the sender, are what to check
+# first if a dispatch never arrives.
 #
 # Three links are still missing, and none of them is code in this repo:
 #
