@@ -84,6 +84,20 @@ on:
   # unwoken feed turns a stale page into a wrong notification: it says the board
   # changed and hands the reader a board that has not. Worse than not notifying.
   #
+  # THIS NARROWS THAT WINDOW; IT DOES NOT CLOSE IT, and the paragraph above reads
+  # like a cure, so the residue is written down next to it. The push is not sent
+  # from here — it is sent by `.github-private`'s front-desk-projection.yml,
+  # which is NOTIFY_WORKFLOW_REFS[0] in desk's `src/oidc.js`, and desk's
+  # `/pending` answers a bodyless push with "The board changed." The board that
+  # notification then sends a reader to is the `feed` branch THIS lane publishes.
+  # One webhook now wakes both lanes, but it wakes them in PARALLEL, and this one
+  # is the slower by construction: a broker mint, a whole-board GraphQL query,
+  # two `cosign sign-blob` calls and a force-push, against a projection that only
+  # has to publish. So a push can still land ahead of the feed it points at. What
+  # a trigger can fix is the hour; the remaining skew is the length of this job,
+  # and closing that would need an ordering between two repos' lanes that neither
+  # has and this one cannot add alone.
+  #
   # THE BURST IS BOUNDED BY `concurrency:` BELOW, not by anything here.
   # `projects_v2_item` fires per field edit, so a scoring pass over the board is
   # dozens of events in a minute — but GitHub's documented behaviour for a
@@ -110,37 +124,40 @@ on:
   workflow_dispatch:
 
 # INERT UNTIL PROVISIONED (issues #3 and #5), and that is the honest state rather
-# than a half-finished one. This is the RECEIVING half; for `pr-activity` the
-# sending half already exists in bounded.tools (`dispatchPrActivity`, disabled by
-# empty PR_DISPATCH_REPO/PR_DISPATCH_APP), and for `claim-activity` no sender
-# exists yet at all — the claim doors are the natural one, since they are the
-# only things that know a claim changed and they already run on every claim
-# (#5). Adding the second type does NOT make the credential ask below any
-# bigger: one binding-plane entry serves all three events.
+# than a half-finished one. This is the RECEIVING half, and it is now the only
+# half that is finished: bounded.tools#43 replaced the disabled
+# `dispatchPrActivity` branch this paragraph used to describe with a real sender
+# (`src/dispatch-events.ts`, wired in `src/worker.ts`) that fans all three of the
+# types above out of one webhook receiver. "No sender exists" was true of every
+# type when #3 and #5 were written, and is true of none of them now. Adding the
+# third type does NOT make the credential ask below any bigger: one
+# binding-plane entry serves all three events.
 #
-# THAT DESCRIPTION OF THE SENDER IS NOW OUT OF DATE and is left standing only
-# because the links below are what still gate this lane. bounded.tools#43
-# replaced the disabled `dispatchPrActivity` branch with a real sender
-# (src/dispatch-events.ts, wired in src/worker.ts), which fans out all three of
-# the types above from one webhook receiver — so "no sender exists" is true of
-# none of them now. What is still unverified from this repo is whether the App
-# delivers the events at all (link 1) and whether the broker will mint
-# `contents: write` here (link 3); those, not the sender, are what to check
-# first if a dispatch never arrives.
-#
-# Three links are still missing, and none of them is code in this repo:
+# THE LIST BELOW IS WHAT STILL GATES THIS LANE, so it is kept CURRENT rather than
+# kept as history. A reader arrives at it because a dispatch did not come, and a
+# stale list sends them to provision something that no longer exists — which is
+# exactly what two of these three entries would have done after #43:
 #
 #   1. bs-door-hooks — the App behind hooks.bounded.tools — declares
-#      `default_events: ["workflow_run"]`, so no `pull_request` delivery ever
-#      reaches the receiver. Cheapest link, and the one nothing had named.
-#   2. bounded.tools sets PR_DISPATCH_REPO to this repo and PR_DISPATCH_APP to
-#      the door in 3. Either alone leaves the branch disabled.
-#   3. A broker binding-plane entry that can mint `contents: write` HERE — the
-#      permission `repository_dispatch` requires. `contents` is in the broker's
-#      PRIVILEGED_APP_PERMISSIONS, and the mint downscopes by permission, never
-#      by repository, so the grant must be bounded by the INSTALLATION: a door
-#      installed on this repo alone. Pointing the dispatch here rather than at
-#      `.github-private` is what makes that ask small enough to consider.
+#      `default_events: ["workflow_run"]`, so no delivery the sender needs ever
+#      reaches the receiver. It now needs THREE events rather than the one #3
+#      named: `pull_request`, `issues` and `projects_v2_item` — one per case in
+#      `decide()`, and the third is the only source of a board change at all.
+#      Still the cheapest link and still the one to check first.
+#   2. REMOVED, not satisfied — and recorded rather than deleted so the next
+#      reader does not go hunting for a variable to fill. This asked bounded.tools
+#      to set PR_DISPATCH_REPO and PR_DISPATCH_APP; #43 deleted both symbols
+#      along with the branch they disabled, and the door is now a default in the
+#      code (`env.DISPATCH_APP ?? "bs-door-dispatch"`). There is nothing left to
+#      configure, which is a link that went away rather than one that got done.
+#   3. `bs-door-dispatch` — a broker binding-plane entry that can mint
+#      `contents: write` HERE, the permission `repository_dispatch` requires.
+#      `contents` is in the broker's PRIVILEGED_APP_PERMISSIONS, and the mint
+#      downscopes by permission, never by repository, so the grant must be
+#      bounded by the INSTALLATION: a door installed on this repo alone, which is
+#      what infra#530's scope guard enforces — the sender logs a 403 from it as a
+#      correct refusal, not a transport fault. Pointing the dispatch here rather
+#      than at `.github-private` is what makes that ask small enough to consider.
 #
 # Adding the trigger now is deliberate: it is this repo's own half, it is a no-op
 # until an event arrives, and it means link 4 is not what anyone is waiting on.
