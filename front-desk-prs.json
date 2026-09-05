@@ -1,0 +1,2204 @@
+{
+  "generated_at": "2026-09-05T16:54:09Z",
+  "feed": "front-desk-prs-public",
+  "visibility_filter": "repo_private == false (default-deny)",
+  "project": {
+    "org": "bounded-systems",
+    "number": 2,
+    "title": "Front Desk"
+  },
+  "items": [
+    {
+      "repo": "bounded-systems/content-catalog",
+      "number": 38,
+      "title": "chore: refresh merged catalog (run 33389389897)",
+      "url": "https://github.com/bounded-systems/content-catalog/pull/38",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "not_measured",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/cas",
+      "number": 23,
+      "title": "ci: bump the actions group with 7 updates",
+      "url": "https://github.com/bounded-systems/cas/pull/23",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/verb-router",
+      "number": 8,
+      "title": "ci: Bump the actions group with 4 updates",
+      "url": "https://github.com/bounded-systems/verb-router/pull/8",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/installer",
+      "number": 17,
+      "title": "ci: bump the actions group with 7 updates",
+      "url": "https://github.com/bounded-systems/installer/pull/17",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/mint",
+      "number": 60,
+      "title": "ci: bump the actions group across 1 directory with 5 updates",
+      "url": "https://github.com/bounded-systems/mint/pull/60",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/trellis",
+      "number": 48,
+      "title": "ci: bump the actions group with 4 updates",
+      "url": "https://github.com/bounded-systems/trellis/pull/48",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/await-approval",
+      "number": 16,
+      "title": "ci: bump the actions group with 4 updates",
+      "url": "https://github.com/bounded-systems/await-approval/pull/16",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/bounded-tools-mcp",
+      "number": 21,
+      "title": "ci: bump the actions group with 4 updates",
+      "url": "https://github.com/bounded-systems/bounded-tools-mcp/pull/21",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/bounded-tools-mcp",
+      "number": 22,
+      "title": "chore(deps): bump the npm group with 2 updates",
+      "url": "https://github.com/bounded-systems/bounded-tools-mcp/pull/22",
+      "labels": [
+        "dependencies",
+        "javascript"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/descriptor-kit",
+      "number": 14,
+      "title": "ci: bump the actions group with 5 updates",
+      "url": "https://github.com/bounded-systems/descriptor-kit/pull/14",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/brand",
+      "number": 60,
+      "title": "ci: bump the actions group across 1 directory with 6 updates",
+      "url": "https://github.com/bounded-systems/brand/pull/60",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/door-scout",
+      "number": 30,
+      "title": "ci: bump the actions group with 8 updates",
+      "url": "https://github.com/bounded-systems/door-scout/pull/30",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/fleet",
+      "number": 16,
+      "title": "ci: bump the actions group with 4 updates",
+      "url": "https://github.com/bounded-systems/fleet/pull/16",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/lobby",
+      "number": 15,
+      "title": "ci: bump the actions group with 4 updates",
+      "url": "https://github.com/bounded-systems/lobby/pull/15",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/door-peercred",
+      "number": 24,
+      "title": "ci: bump the actions group with 6 updates",
+      "url": "https://github.com/bounded-systems/door-peercred/pull/24",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/door-net",
+      "number": 31,
+      "title": "ci: bump the actions group with 6 updates",
+      "url": "https://github.com/bounded-systems/door-net/pull/31",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/guest-room",
+      "number": 81,
+      "title": "chore(deps): bump the github-actions group with 5 updates",
+      "url": "https://github.com/bounded-systems/guest-room/pull/81",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/guest-room",
+      "number": 82,
+      "title": "chore(deps): bump bounded-systems/.github/.github/workflows/_pr-claim.yml from bc4cb7dada47cc59eed416372a4851201bd6f503 to 63715f952022f2edfef72c0a4a0ec94e48e51e71",
+      "url": "https://github.com/bounded-systems/guest-room/pull/82",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/guest-room",
+      "number": 83,
+      "title": "chore(deps): bump bounded-systems/.github/.github/workflows/_claim-sweep.yml from 14c1a9b3ade8bb6416f46c890eda21823647da09 to 4f465d0bffbee609309468a541853095aefab6ad",
+      "url": "https://github.com/bounded-systems/guest-room/pull/83",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/guest-room",
+      "number": 84,
+      "title": "chore(deps): bump bounded-systems/.github/.github/workflows/repo-standard.yml from d43c3280588ef05f4ead43426db1091d4cb8f520 to 4f465d0bffbee609309468a541853095aefab6ad",
+      "url": "https://github.com/bounded-systems/guest-room/pull/84",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/guest-room",
+      "number": 85,
+      "title": "chore(deps): bump bounded-systems/.github/.github/actions/broker-gh-token from d1b25e3bb48ba919f2af0f1ab83063a1d76d88d4 to 4f465d0bffbee609309468a541853095aefab6ad",
+      "url": "https://github.com/bounded-systems/guest-room/pull/85",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/site-mcp",
+      "number": 52,
+      "title": "deps: bump the npm group with 2 updates",
+      "url": "https://github.com/bounded-systems/site-mcp/pull/52",
+      "labels": [
+        "dependencies",
+        "javascript"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/site-mcp",
+      "number": 53,
+      "title": "ci: bump the actions group across 1 directory with 9 updates",
+      "url": "https://github.com/bounded-systems/site-mcp/pull/53",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/door-concierge",
+      "number": 27,
+      "title": "ci: bump the actions group with 6 updates",
+      "url": "https://github.com/bounded-systems/door-concierge/pull/27",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/keeper-wire",
+      "number": 20,
+      "title": "ci: bump the actions group across 1 directory with 4 updates",
+      "url": "https://github.com/bounded-systems/keeper-wire/pull/20",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/content-catalog",
+      "number": 39,
+      "title": "chore: refresh merged catalog (run 33498324246)",
+      "url": "https://github.com/bounded-systems/content-catalog/pull/39",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "not_measured",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/keycard",
+      "number": 28,
+      "title": "ci: adopt pr-claim, so PRs here are checked against a live Front Desk claim",
+      "url": "https://github.com/bounded-systems/keycard/pull/28",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/keycard/actions/runs/33563590570/job/100041561893"
+      }
+    },
+    {
+      "repo": "bounded-systems/door-net",
+      "number": 32,
+      "title": "ci: adopt pr-claim, so PRs here are checked against a live Front Desk claim",
+      "url": "https://github.com/bounded-systems/door-net/pull/32",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/door-net/actions/runs/33563115840/job/100040031940"
+      }
+    },
+    {
+      "repo": "bounded-systems/door-scout",
+      "number": 31,
+      "title": "ci: adopt pr-claim, so PRs here are checked against a live Front Desk claim",
+      "url": "https://github.com/bounded-systems/door-scout/pull/31",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/door-scout/actions/runs/33563121337/job/100040048525"
+      }
+    },
+    {
+      "repo": "bounded-systems/door-concierge",
+      "number": 28,
+      "title": "ci: adopt pr-claim, so PRs here are checked against a live Front Desk claim",
+      "url": "https://github.com/bounded-systems/door-concierge/pull/28",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/door-concierge/actions/runs/33563128684/job/100040072014"
+      }
+    },
+    {
+      "repo": "bounded-systems/door-peercred",
+      "number": 25,
+      "title": "ci: adopt pr-claim, so PRs here are checked against a live Front Desk claim",
+      "url": "https://github.com/bounded-systems/door-peercred/pull/25",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/door-peercred/actions/runs/33563134876/job/100040090892"
+      }
+    },
+    {
+      "repo": "bounded-systems/cas",
+      "number": 24,
+      "title": "ci: adopt pr-claim, so PRs here are checked against a live Front Desk claim",
+      "url": "https://github.com/bounded-systems/cas/pull/24",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/cas/actions/runs/33563178719/job/100040226696"
+      }
+    },
+    {
+      "repo": "bounded-systems/audit-context",
+      "number": 15,
+      "title": "ci: adopt pr-claim, so PRs here are checked against a live Front Desk claim",
+      "url": "https://github.com/bounded-systems/audit-context/pull/15",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/audit-context/actions/runs/33563186216/job/100040251017"
+      }
+    },
+    {
+      "repo": "bounded-systems/disposition",
+      "number": 15,
+      "title": "ci: adopt pr-claim, so PRs here are checked against a live Front Desk claim",
+      "url": "https://github.com/bounded-systems/disposition/pull/15",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/disposition/actions/runs/33563195678/job/100040281667"
+      }
+    },
+    {
+      "repo": "bounded-systems/fs",
+      "number": 15,
+      "title": "ci: adopt pr-claim, so PRs here are checked against a live Front Desk claim",
+      "url": "https://github.com/bounded-systems/fs/pull/15",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/fs/actions/runs/33563210253/job/100040327625"
+      }
+    },
+    {
+      "repo": "bounded-systems/machine-schema",
+      "number": 14,
+      "title": "ci: adopt pr-claim, so PRs here are checked against a live Front Desk claim",
+      "url": "https://github.com/bounded-systems/machine-schema/pull/14",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/machine-schema/actions/runs/33563215921/job/100040345243"
+      }
+    },
+    {
+      "repo": "bounded-systems/policy",
+      "number": 15,
+      "title": "ci: adopt pr-claim, so PRs here are checked against a live Front Desk claim",
+      "url": "https://github.com/bounded-systems/policy/pull/15",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/policy/actions/runs/33563223608/job/100040368201"
+      }
+    },
+    {
+      "repo": "bounded-systems/anchored-chain",
+      "number": 16,
+      "title": "ci: adopt pr-claim, so PRs here are checked against a live Front Desk claim",
+      "url": "https://github.com/bounded-systems/anchored-chain/pull/16",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/anchored-chain/actions/runs/33563230277/job/100040388948"
+      }
+    },
+    {
+      "repo": "bounded-systems/auth",
+      "number": 15,
+      "title": "ci: adopt pr-claim, so PRs here are checked against a live Front Desk claim",
+      "url": "https://github.com/bounded-systems/auth/pull/15",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/auth/actions/runs/33563250841/job/100040455125"
+      }
+    },
+    {
+      "repo": "bounded-systems/bd",
+      "number": 18,
+      "title": "ci: adopt pr-claim, so PRs here are checked against a live Front Desk claim",
+      "url": "https://github.com/bounded-systems/bd/pull/18",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/bd/actions/runs/33563251941/job/100040455862"
+      }
+    },
+    {
+      "repo": "bounded-systems/gh",
+      "number": 15,
+      "title": "ci: adopt pr-claim, so PRs here are checked against a live Front Desk claim",
+      "url": "https://github.com/bounded-systems/gh/pull/15",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/gh/actions/runs/33563258976/job/100040479084"
+      }
+    },
+    {
+      "repo": "bounded-systems/git",
+      "number": 16,
+      "title": "ci: adopt pr-claim, so PRs here are checked against a live Front Desk claim",
+      "url": "https://github.com/bounded-systems/git/pull/16",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/git/actions/runs/33563267261/job/100040507276"
+      }
+    },
+    {
+      "repo": "bounded-systems/github-budget",
+      "number": 18,
+      "title": "ci: adopt pr-claim, so PRs here are checked against a live Front Desk claim",
+      "url": "https://github.com/bounded-systems/github-budget/pull/18",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/github-budget/actions/runs/33563273984/job/100040529130"
+      }
+    },
+    {
+      "repo": "bounded-systems/host",
+      "number": 14,
+      "title": "ci: adopt pr-claim, so PRs here are checked against a live Front Desk claim",
+      "url": "https://github.com/bounded-systems/host/pull/14",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/host/actions/runs/33563278825/job/100040543966"
+      }
+    },
+    {
+      "repo": "bounded-systems/proc",
+      "number": 15,
+      "title": "ci: adopt pr-claim, so PRs here are checked against a live Front Desk claim",
+      "url": "https://github.com/bounded-systems/proc/pull/15",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/proc/actions/runs/33563285585/job/100040566165"
+      }
+    },
+    {
+      "repo": "bounded-systems/repo-root",
+      "number": 14,
+      "title": "ci: adopt pr-claim, so PRs here are checked against a live Front Desk claim",
+      "url": "https://github.com/bounded-systems/repo-root/pull/14",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/repo-root/actions/runs/33563292893/job/100040590005"
+      }
+    },
+    {
+      "repo": "bounded-systems/scout",
+      "number": 15,
+      "title": "ci: adopt pr-claim, so PRs here are checked against a live Front Desk claim",
+      "url": "https://github.com/bounded-systems/scout/pull/15",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/scout/actions/runs/33563299241/job/100040609508"
+      }
+    },
+    {
+      "repo": "bounded-systems/slack",
+      "number": 15,
+      "title": "ci: adopt pr-claim, so PRs here are checked against a live Front Desk claim",
+      "url": "https://github.com/bounded-systems/slack/pull/15",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/slack/actions/runs/33563307657/job/100040635301"
+      }
+    },
+    {
+      "repo": "bounded-systems/surface-sync",
+      "number": 15,
+      "title": "ci: adopt pr-claim, so PRs here are checked against a live Front Desk claim",
+      "url": "https://github.com/bounded-systems/surface-sync/pull/15",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/surface-sync/actions/runs/33563316005/job/100040663300"
+      }
+    },
+    {
+      "repo": "bounded-systems/lobby",
+      "number": 16,
+      "title": "ci: adopt pr-claim, so PRs here are checked against a live Front Desk claim",
+      "url": "https://github.com/bounded-systems/lobby/pull/16",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/lobby/actions/runs/33563330550/job/100040709115"
+      }
+    },
+    {
+      "repo": "bounded-systems/schema-gen",
+      "number": 14,
+      "title": "ci: adopt pr-claim, so PRs here are checked against a live Front Desk claim",
+      "url": "https://github.com/bounded-systems/schema-gen/pull/14",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/schema-gen/actions/runs/33563336178/job/100040727236"
+      }
+    },
+    {
+      "repo": "bounded-systems/installer",
+      "number": 18,
+      "title": "ci: adopt pr-claim, so PRs here are checked against a live Front Desk claim",
+      "url": "https://github.com/bounded-systems/installer/pull/18",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/installer/actions/runs/33563364458/job/100040823772"
+      }
+    },
+    {
+      "repo": "bounded-systems/seam-check",
+      "number": 11,
+      "title": "ci: adopt pr-claim, so PRs here are checked against a live Front Desk claim",
+      "url": "https://github.com/bounded-systems/seam-check/pull/11",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/seam-check/actions/runs/33563385925/job/100040889490"
+      }
+    },
+    {
+      "repo": "bounded-systems/bounded-tools-mcp",
+      "number": 23,
+      "title": "ci: adopt pr-claim, so PRs here are checked against a live Front Desk claim",
+      "url": "https://github.com/bounded-systems/bounded-tools-mcp/pull/23",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/bounded-tools-mcp/actions/runs/33563434181/job/100041049107"
+      }
+    },
+    {
+      "repo": "bounded-systems/fleet",
+      "number": 17,
+      "title": "ci: adopt pr-claim, so PRs here are checked against a live Front Desk claim",
+      "url": "https://github.com/bounded-systems/fleet/pull/17",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/fleet/actions/runs/33563442116/job/100041076796"
+      }
+    },
+    {
+      "repo": "bounded-systems/trellis",
+      "number": 49,
+      "title": "ci: adopt pr-claim, so PRs here are checked against a live Front Desk claim",
+      "url": "https://github.com/bounded-systems/trellis/pull/49",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/trellis/actions/runs/33563477164/job/100041184134"
+      }
+    },
+    {
+      "repo": "bounded-systems/trellis-kit",
+      "number": 21,
+      "title": "ci: adopt pr-claim, so PRs here are checked against a live Front Desk claim",
+      "url": "https://github.com/bounded-systems/trellis-kit/pull/21",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/trellis-kit/actions/runs/33563483983/job/100041209093"
+      }
+    },
+    {
+      "repo": "bounded-systems/descriptor-kit",
+      "number": 15,
+      "title": "ci: adopt pr-claim, so PRs here are checked against a live Front Desk claim",
+      "url": "https://github.com/bounded-systems/descriptor-kit/pull/15",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/descriptor-kit/actions/runs/33563529201/job/100041358875"
+      }
+    },
+    {
+      "repo": "bounded-systems/await-approval",
+      "number": 17,
+      "title": "ci: adopt pr-claim, so PRs here are checked against a live Front Desk claim",
+      "url": "https://github.com/bounded-systems/await-approval/pull/17",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/await-approval/actions/runs/33563572836/job/100041504623"
+      }
+    },
+    {
+      "repo": "bounded-systems/toolpath",
+      "number": 8,
+      "title": "ci: adopt pr-claim, so PRs here are checked against a live Front Desk claim",
+      "url": "https://github.com/bounded-systems/toolpath/pull/8",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/toolpath/actions/runs/33563595397/job/100041578687"
+      }
+    },
+    {
+      "repo": "bounded-systems/proofs",
+      "number": 11,
+      "title": "ci: adopt pr-claim, so PRs here are checked against a live Front Desk claim",
+      "url": "https://github.com/bounded-systems/proofs/pull/11",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/proofs/actions/runs/33563603603/job/100041606399"
+      }
+    },
+    {
+      "repo": "bounded-systems/verb-router",
+      "number": 9,
+      "title": "ci: adopt pr-claim, so PRs here are checked against a live Front Desk claim",
+      "url": "https://github.com/bounded-systems/verb-router/pull/9",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/verb-router/actions/runs/33563623478/job/100041673661"
+      }
+    },
+    {
+      "repo": "bounded-systems/verb-claude-md",
+      "number": 4,
+      "title": "ci: adopt pr-claim, so PRs here are checked against a live Front Desk claim",
+      "url": "https://github.com/bounded-systems/verb-claude-md/pull/4",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/verb-claude-md/actions/runs/33563628395/job/100041688946"
+      }
+    },
+    {
+      "repo": "bounded-systems/content-catalog",
+      "number": 41,
+      "title": "chore: refresh merged catalog (run 33617348106)",
+      "url": "https://github.com/bounded-systems/content-catalog/pull/41",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "not_measured",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/static-mcp",
+      "number": 35,
+      "title": "chore(deps): bump fast-uri from 3.1.5 to 3.1.7",
+      "url": "https://github.com/bounded-systems/static-mcp/pull/35",
+      "labels": [
+        "dependencies",
+        "javascript"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/bounded-tools-mcp",
+      "number": 24,
+      "title": "chore(deps): bump fast-uri from 3.1.5 to 3.1.7",
+      "url": "https://github.com/bounded-systems/bounded-tools-mcp/pull/24",
+      "labels": [
+        "dependencies",
+        "javascript"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/site-mcp",
+      "number": 55,
+      "title": "deps: bump fast-uri from 3.1.5 to 3.1.7",
+      "url": "https://github.com/bounded-systems/site-mcp/pull/55",
+      "labels": [
+        "dependencies",
+        "javascript"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/conformance-kit",
+      "number": 75,
+      "title": "ci: bump fast-uri from 3.1.5 to 3.1.7",
+      "url": "https://github.com/bounded-systems/conformance-kit/pull/75",
+      "labels": [
+        "dependencies",
+        "javascript"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/content-catalog",
+      "number": 42,
+      "title": "chore: refresh merged catalog (run 33743073451)",
+      "url": "https://github.com/bounded-systems/content-catalog/pull/42",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "not_measured",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/bounded-tools-mcp",
+      "number": 25,
+      "title": "chore(deps): bump qs from 6.15.3 to 6.16.0",
+      "url": "https://github.com/bounded-systems/bounded-tools-mcp/pull/25",
+      "labels": [
+        "dependencies",
+        "javascript"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/static-mcp",
+      "number": 36,
+      "title": "chore(deps): bump qs from 6.15.3 to 6.16.0",
+      "url": "https://github.com/bounded-systems/static-mcp/pull/36",
+      "labels": [
+        "dependencies",
+        "javascript"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/schema-bridge",
+      "number": 15,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/schema-bridge/pull/15",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/schema-bridge/actions/runs/33750787924/job/100633608993"
+      }
+    },
+    {
+      "repo": "bounded-systems/dev-contracts",
+      "number": 23,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/dev-contracts/pull/23",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/dev-contracts/actions/runs/33750800806/job/100633651169"
+      }
+    },
+    {
+      "repo": "bounded-systems/git-ast",
+      "number": 62,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/git-ast/pull/62",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/git-ast/actions/runs/33750815948/job/100633699535"
+      }
+    },
+    {
+      "repo": "bounded-systems/frond",
+      "number": 17,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/frond/pull/17",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/frond/actions/runs/33750828569/job/100633738409"
+      }
+    },
+    {
+      "repo": "bounded-systems/dev-registry",
+      "number": 15,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/dev-registry/pull/15",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/dev-registry/actions/runs/33750843526/job/100633784515"
+      }
+    },
+    {
+      "repo": "bounded-systems/hooksmith",
+      "number": 141,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/hooksmith/pull/141",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/hooksmith/actions/runs/33750854310/job/100633818038"
+      }
+    },
+    {
+      "repo": "bounded-systems/lima-devshell",
+      "number": 18,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/lima-devshell/pull/18",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/lima-devshell/actions/runs/33750868551/job/100633864139"
+      }
+    },
+    {
+      "repo": "bounded-systems/fold-engine",
+      "number": 41,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/fold-engine/pull/41",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/fold-engine/actions/runs/33750875944/job/100633886637"
+      }
+    },
+    {
+      "repo": "bounded-systems/lone",
+      "number": 48,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/lone/pull/48",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/lone/actions/runs/33750885336/job/100633917333"
+      }
+    },
+    {
+      "repo": "bounded-systems/prx",
+      "number": 1091,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/prx/pull/1091",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/prx/actions/runs/33750897009/job/100633953776"
+      }
+    },
+    {
+      "repo": "bounded-systems/bounded.tools",
+      "number": 77,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/bounded.tools/pull/77",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/bounded.tools/actions/runs/33750909477/job/100633991005"
+      }
+    },
+    {
+      "repo": "bounded-systems/claude-box",
+      "number": 272,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/claude-box/pull/272",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/claude-box/actions/runs/33750916881/job/100634016580"
+      }
+    },
+    {
+      "repo": "bounded-systems/facilities",
+      "number": 23,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/facilities/pull/23",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/facilities/actions/runs/33750929064/job/100634055945"
+      }
+    },
+    {
+      "repo": "bounded-systems/ocap-provenance",
+      "number": 37,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/ocap-provenance/pull/37",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/ocap-provenance/actions/runs/33750943976/job/100634100226"
+      }
+    },
+    {
+      "repo": "bounded-systems/guest-room",
+      "number": 87,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/guest-room/pull/87",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/guest-room/actions/runs/33750967714/job/100634175015"
+      }
+    },
+    {
+      "repo": "bounded-systems/door-kit",
+      "number": 49,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/door-kit/pull/49",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/door-kit/actions/runs/33750981960/job/100634217660"
+      }
+    },
+    {
+      "repo": "bounded-systems/door-keeper",
+      "number": 43,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/door-keeper/pull/43",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/door-keeper/actions/runs/33750995207/job/100634260277"
+      }
+    },
+    {
+      "repo": "bounded-systems/door-net",
+      "number": 33,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/door-net/pull/33",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/door-net/actions/runs/33751009538/job/100634307002"
+      }
+    },
+    {
+      "repo": "bounded-systems/door-scout",
+      "number": 32,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/door-scout/pull/32",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/door-scout/actions/runs/33751022902/job/100634351530"
+      }
+    },
+    {
+      "repo": "bounded-systems/door-concierge",
+      "number": 29,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/door-concierge/pull/29",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/door-concierge/actions/runs/33751035205/job/100634391127"
+      }
+    },
+    {
+      "repo": "bounded-systems/door-peercred",
+      "number": 26,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/door-peercred/pull/26",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/door-peercred/actions/runs/33751049983/job/100634439790"
+      }
+    },
+    {
+      "repo": "bounded-systems/claude-token-tools",
+      "number": 22,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/claude-token-tools/pull/22",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/claude-token-tools/actions/runs/33751064503/job/100634483710"
+      }
+    },
+    {
+      "repo": "bounded-systems/gh-project-room",
+      "number": 103,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/gh-project-room/pull/103",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/gh-project-room/actions/runs/33751074112/job/100634514419"
+      }
+    },
+    {
+      "repo": "bounded-systems/brand",
+      "number": 62,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/brand/pull/62",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/brand/actions/runs/33751083262/job/100634543225"
+      }
+    },
+    {
+      "repo": "bounded-systems/site",
+      "number": 267,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/site/pull/267",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/site/actions/runs/33751095251/job/100634580169"
+      }
+    },
+    {
+      "repo": "bounded-systems/verbspec",
+      "number": 35,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/verbspec/pull/35",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/verbspec/actions/runs/33751108142/job/100634620799"
+      }
+    },
+    {
+      "repo": "bounded-systems/cas",
+      "number": 25,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/cas/pull/25",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/cas/actions/runs/33751118771/job/100634654126"
+      }
+    },
+    {
+      "repo": "bounded-systems/audit-context",
+      "number": 16,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/audit-context/pull/16",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/audit-context/actions/runs/33751129831/job/100634688778"
+      }
+    },
+    {
+      "repo": "bounded-systems/disposition",
+      "number": 16,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/disposition/pull/16",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/disposition/actions/runs/33751140826/job/100634726126"
+      }
+    },
+    {
+      "repo": "bounded-systems/env",
+      "number": 21,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/env/pull/21",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/env/actions/runs/33751153105/job/100634762546"
+      }
+    },
+    {
+      "repo": "bounded-systems/fs",
+      "number": 16,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/fs/pull/16",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/fs/actions/runs/33751165077/job/100634798621"
+      }
+    },
+    {
+      "repo": "bounded-systems/machine-schema",
+      "number": 15,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/machine-schema/pull/15",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/machine-schema/actions/runs/33751179153/job/100634840937"
+      }
+    },
+    {
+      "repo": "bounded-systems/policy",
+      "number": 16,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/policy/pull/16",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/policy/actions/runs/33751191395/job/100634882612"
+      }
+    },
+    {
+      "repo": "bounded-systems/anchored-chain",
+      "number": 17,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/anchored-chain/pull/17",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/anchored-chain/actions/runs/33751203345/job/100634921081"
+      }
+    },
+    {
+      "repo": "bounded-systems/anchored-chain-sqlite",
+      "number": 21,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/anchored-chain-sqlite/pull/21",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/anchored-chain-sqlite/actions/runs/33751213490/job/100634954224"
+      }
+    },
+    {
+      "repo": "bounded-systems/auth",
+      "number": 16,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/auth/pull/16",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/auth/actions/runs/33751227125/job/100634996265"
+      }
+    },
+    {
+      "repo": "bounded-systems/bd",
+      "number": 19,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/bd/pull/19",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/bd/actions/runs/33751238463/job/100635031003"
+      }
+    },
+    {
+      "repo": "bounded-systems/gh",
+      "number": 16,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/gh/pull/16",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/gh/actions/runs/33751250721/job/100635068454"
+      }
+    },
+    {
+      "repo": "bounded-systems/git",
+      "number": 17,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/git/pull/17",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/git/actions/runs/33751263181/job/100635108538"
+      }
+    },
+    {
+      "repo": "bounded-systems/github-budget",
+      "number": 19,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/github-budget/pull/19",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/github-budget/actions/runs/33751275052/job/100635145386"
+      }
+    },
+    {
+      "repo": "bounded-systems/host",
+      "number": 15,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/host/pull/15",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/host/actions/runs/33751287265/job/100635184871"
+      }
+    },
+    {
+      "repo": "bounded-systems/proc",
+      "number": 16,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/proc/pull/16",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/proc/actions/runs/33751299498/job/100635222898"
+      }
+    },
+    {
+      "repo": "bounded-systems/repo-root",
+      "number": 15,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/repo-root/pull/15",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/repo-root/actions/runs/33751312218/job/100635262566"
+      }
+    },
+    {
+      "repo": "bounded-systems/scout",
+      "number": 16,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/scout/pull/16",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/scout/actions/runs/33751324876/job/100635301191"
+      }
+    },
+    {
+      "repo": "bounded-systems/slack",
+      "number": 16,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/slack/pull/16",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/slack/actions/runs/33751338128/job/100635341583"
+      }
+    },
+    {
+      "repo": "bounded-systems/surface-sync",
+      "number": 16,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/surface-sync/pull/16",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/surface-sync/actions/runs/33751349660/job/100635378472"
+      }
+    },
+    {
+      "repo": "bounded-systems/string-audit",
+      "number": 86,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/string-audit/pull/86",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/string-audit/actions/runs/33751360013/job/100635414640"
+      }
+    },
+    {
+      "repo": "bounded-systems/lobby",
+      "number": 17,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/lobby/pull/17",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/lobby/actions/runs/33751370493/job/100635450080"
+      }
+    },
+    {
+      "repo": "bounded-systems/schema-gen",
+      "number": 15,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/schema-gen/pull/15",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/schema-gen/actions/runs/33751381832/job/100635487366"
+      }
+    },
+    {
+      "repo": "bounded-systems/content-catalog",
+      "number": 43,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/content-catalog/pull/43",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/content-catalog/actions/runs/33751395334/job/100635526866"
+      }
+    },
+    {
+      "repo": "bounded-systems/mint",
+      "number": 62,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/mint/pull/62",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/mint/actions/runs/33751408594/job/100635566965"
+      }
+    },
+    {
+      "repo": "bounded-systems/trust",
+      "number": 35,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/trust/pull/35",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/trust/actions/runs/33751422700/job/100635609480"
+      }
+    },
+    {
+      "repo": "bounded-systems/installer",
+      "number": 19,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/installer/pull/19",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/installer/actions/runs/33751433347/job/100635643826"
+      }
+    },
+    {
+      "repo": "bounded-systems/baobab",
+      "number": 27,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/baobab/pull/27",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/baobab/actions/runs/33751445034/job/100635682409"
+      }
+    },
+    {
+      "repo": "bounded-systems/seam-check",
+      "number": 12,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/seam-check/pull/12",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/seam-check/actions/runs/33751467105/job/100635755142"
+      }
+    },
+    {
+      "repo": "bounded-systems/site-mcp",
+      "number": 56,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/site-mcp/pull/56",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/site-mcp/actions/runs/33751480234/job/100635797380"
+      }
+    },
+    {
+      "repo": "bounded-systems/conformance-kit",
+      "number": 76,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/conformance-kit/pull/76",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/conformance-kit/actions/runs/33751493209/job/100635839392"
+      }
+    },
+    {
+      "repo": "bounded-systems/verify",
+      "number": 17,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/verify/pull/17",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/verify/actions/runs/33751506582/job/100635882037"
+      }
+    },
+    {
+      "repo": "bounded-systems/cf-oidc-token-broker",
+      "number": 23,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/cf-oidc-token-broker/pull/23",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/cf-oidc-token-broker/actions/runs/33751528247/job/100635954702"
+      }
+    },
+    {
+      "repo": "bounded-systems/static-mcp",
+      "number": 37,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/static-mcp/pull/37",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/static-mcp/actions/runs/33751528816/job/100635956068"
+      }
+    },
+    {
+      "repo": "bounded-systems/deploy",
+      "number": 20,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/deploy/pull/20",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/deploy/actions/runs/33751539544/job/100635991838"
+      }
+    },
+    {
+      "repo": "bounded-systems/bounded-tools-mcp",
+      "number": 26,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/bounded-tools-mcp/pull/26",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/bounded-tools-mcp/actions/runs/33751551702/job/100636031183"
+      }
+    },
+    {
+      "repo": "bounded-systems/fleet",
+      "number": 18,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/fleet/pull/18",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/fleet/actions/runs/33751564779/job/100636069744"
+      }
+    },
+    {
+      "repo": "bounded-systems/conformance",
+      "number": 44,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/conformance/pull/44",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/conformance/actions/runs/33751579360/job/100636111503"
+      }
+    },
+    {
+      "repo": "bounded-systems/gh-action-contracts",
+      "number": 14,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/gh-action-contracts/pull/14",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/gh-action-contracts/actions/runs/33751591380/job/100636149669"
+      }
+    },
+    {
+      "repo": "bounded-systems/gh-action-node-uniqueness",
+      "number": 14,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/gh-action-node-uniqueness/pull/14",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/gh-action-node-uniqueness/actions/runs/33751605958/job/100636194926"
+      }
+    },
+    {
+      "repo": "bounded-systems/gh-action-brand-checks",
+      "number": 14,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/gh-action-brand-checks/pull/14",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/gh-action-brand-checks/actions/runs/33751618586/job/100636237539"
+      }
+    },
+    {
+      "repo": "bounded-systems/trellis",
+      "number": 50,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/trellis/pull/50",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/trellis/actions/runs/33751629817/job/100636273173"
+      }
+    },
+    {
+      "repo": "bounded-systems/trellis-kit",
+      "number": 22,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/trellis-kit/pull/22",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/trellis-kit/actions/runs/33751645363/job/100636323093"
+      }
+    },
+    {
+      "repo": "bounded-systems/keeper-wire",
+      "number": 22,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/keeper-wire/pull/22",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/keeper-wire/actions/runs/33751659074/job/100636367065"
+      }
+    },
+    {
+      "repo": "bounded-systems/scout-wire",
+      "number": 28,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/scout-wire/pull/28",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/scout-wire/actions/runs/33751672666/job/100636406910"
+      }
+    },
+    {
+      "repo": "bounded-systems/concierge-wire",
+      "number": 19,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/concierge-wire/pull/19",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/concierge-wire/actions/runs/33751685980/job/100636454008"
+      }
+    },
+    {
+      "repo": "bounded-systems/synoptic",
+      "number": 23,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/synoptic/pull/23",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/synoptic/actions/runs/33751709971/job/100636519638"
+      }
+    },
+    {
+      "repo": "bounded-systems/descriptor-kit",
+      "number": 16,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/descriptor-kit/pull/16",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/descriptor-kit/actions/runs/33751721728/job/100636556132"
+      }
+    },
+    {
+      "repo": "bounded-systems/drift-gate",
+      "number": 32,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/drift-gate/pull/32",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/drift-gate/actions/runs/33751734329/job/100636595303"
+      }
+    },
+    {
+      "repo": "bounded-systems/verbspec-mcp",
+      "number": 24,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/verbspec-mcp/pull/24",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/verbspec-mcp/actions/runs/33751745640/job/100636630412"
+      }
+    },
+    {
+      "repo": "bounded-systems/repo-health",
+      "number": 24,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/repo-health/pull/24",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/repo-health/actions/runs/33751761056/job/100636677003"
+      }
+    },
+    {
+      "repo": "bounded-systems/front-desk-scheduler",
+      "number": 197,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/front-desk-scheduler/pull/197",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/front-desk-scheduler/actions/runs/33751773844/job/100636714862"
+      }
+    },
+    {
+      "repo": "bounded-systems/agent-memory",
+      "number": 20,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/agent-memory/pull/20",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/agent-memory/actions/runs/33751787348/job/100636757685"
+      }
+    },
+    {
+      "repo": "bounded-systems/await-approval",
+      "number": 18,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/await-approval/pull/18",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/await-approval/actions/runs/33751800435/job/100636798362"
+      }
+    },
+    {
+      "repo": "bounded-systems/ci-workflows",
+      "number": 40,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/ci-workflows/pull/40",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/ci-workflows/actions/runs/33751813445/job/100636842591"
+      }
+    },
+    {
+      "repo": "bounded-systems/keycard",
+      "number": 29,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/keycard/pull/29",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/keycard/actions/runs/33751819913/job/100636864100"
+      }
+    },
+    {
+      "repo": "bounded-systems/toolpath",
+      "number": 9,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/toolpath/pull/9",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/toolpath/actions/runs/33751829747/job/100636896701"
+      }
+    },
+    {
+      "repo": "bounded-systems/proofs",
+      "number": 12,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/proofs/pull/12",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/proofs/actions/runs/33751837627/job/100636921930"
+      }
+    },
+    {
+      "repo": "bounded-systems/front-desk-feed",
+      "number": 14,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/front-desk-feed/pull/14",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/front-desk-feed/actions/runs/33751847835/job/100636954726"
+      }
+    },
+    {
+      "repo": "bounded-systems/desk",
+      "number": 73,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/desk/pull/73",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/desk/actions/runs/33751861162/job/100636995265"
+      }
+    },
+    {
+      "repo": "bounded-systems/verb-router",
+      "number": 10,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/verb-router/pull/10",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/verb-router/actions/runs/33751873144/job/100637031760"
+      }
+    },
+    {
+      "repo": "bounded-systems/verb-claude-md",
+      "number": 5,
+      "title": "Re-roll the org Claude harness baseline",
+      "url": "https://github.com/bounded-systems/verb-claude-md/pull/5",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/verb-claude-md/actions/runs/33751886700/job/100637074853"
+      }
+    },
+    {
+      "repo": "bounded-systems/site-mcp",
+      "number": 57,
+      "title": "deps: bump qs from 6.15.3 to 6.16.0",
+      "url": "https://github.com/bounded-systems/site-mcp/pull/57",
+      "labels": [
+        "dependencies",
+        "javascript"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/site",
+      "number": 276,
+      "title": "monitor-freshness: alert when a monitor stops completing, not just when it fails",
+      "url": "https://github.com/bounded-systems/site/pull/276",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "compliant",
+        "conclusion": "success",
+        "url": "https://github.com/bounded-systems/site/actions/runs/33759308006/job/100661358017"
+      }
+    },
+    {
+      "repo": "bounded-systems/content-catalog",
+      "number": 44,
+      "title": "chore: refresh merged catalog (run 33861300197)",
+      "url": "https://github.com/bounded-systems/content-catalog/pull/44",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "not_measured",
+        "conclusion": null,
+        "url": null
+      }
+    }
+  ],
+  "item_count": 162,
+  "claim_counts": {
+    "compliant": 126,
+    "non_compliant": 0,
+    "not_measured": 5,
+    "pending": 0,
+    "unknown": 31
+  }
+}
