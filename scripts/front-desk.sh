@@ -287,11 +287,15 @@ else
     | [ (if .fields.Score == null then "?" else (.fields.Score | tostring) end),
         (if .fields.Value == null then "untriaged" else "." end),
         ((.repo // "?") + "#" + ((.number // 0) | tostring)),
-        (.title // "(no title)" | gsub("[\t\r\n]"; " ")) ] | @tsv' "$snapshot" \
+        # TRUNCATED HERE, NOT IN THE SHELL. Bash slices by BYTE unless the
+        # locale says otherwise, so `${t:0:51}` under LC_ALL=C can cut a UTF-8
+        # sequence in half — and board titles carry — and → routinely. jq
+        # slices by codepoint whatever the locale is.
+        (.title // "(no title)" | gsub("[\t\r\n]"; " ")
+          | if length > 52 then .[0:51] + "…" else . end) ] | @tsv' "$snapshot" \
   | while IFS=$'\t' read -r score triage ref title; do
       [ "$score" != "?" ] || score="—"
       [ "$triage" != "." ] || triage=""
-      [ ${#title} -le 52 ] || title="${title:0:51}…"
       printf '  %6s  %-9s  %-36s  %s\n' "$score" "$triage" "$ref" "$title"
     done
   echo
