@@ -18,6 +18,40 @@ The `feed` branch is a single parentless commit, force-pushed hourly. It carries
 | `front-desk-public.json.pem` | the signing certificate |
 | `front-desk-public.json.sha256` | digest, for a cheap integrity check |
 
+## Read it
+
+The feed is a ranked board, and a raw 400 KB of JSON is not one. `scripts/front-desk.sh`
+renders it — no credential, no clone, no `jq` incantation to remember:
+
+```sh
+curl -fsSL -o front-desk.sh \
+  https://raw.githubusercontent.com/bounded-systems/front-desk-feed/main/scripts/front-desk.sh
+bash front-desk.sh
+```
+
+It exists because the canonical reader does not reach here. `.claude/front-desk.sh`
+lives in `.github-private` and reads the projection branch there — private,
+dot-named, and `add_repo` refuses leading-dot names — so the one reader the org
+had was unreachable from exactly the sessions that need it (#15).
+
+It prints the snapshot's age and **exits non-zero when stale**, without claiming
+to know why it is stale; a stopped publish lane and a dropped cron slot are the
+same observation from a reader. It discloses the triaged/untriaged split, because
+`Score` leans on `Value` and only a minority of rows carry one — the order is
+"triaged first", not "most important first", and a low score usually means
+nobody has scored it. It says on the page that it covers the public half only.
+And it holds pull requests back from the claimable list, printing the count.
+
+The one thing it is careful **not** to tell you: that anything on it is free.
+Feed rows carry no lease and no fencing state, and held items are excluded
+upstream rather than marked, so the page names work you could claim — it does
+not report what is unclaimed now. Claim through a door and let the door decide.
+
+It lives here, beside the data it parses, rather than in the boot payload or
+`desk`. A consumer and its feed in separate repos is a second place the shape
+can drift — the failure `.github-private`'s `context-parity.sh` exists to
+prevent for the other public artifact.
+
 ## Verify it
 
 The signature is keyless, so the certificate — not a stored public key — is what
