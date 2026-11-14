@@ -1,0 +1,2065 @@
+{
+  "generated_at": "2026-11-14T10:47:37Z",
+  "feed": "front-desk-prs-public",
+  "visibility_filter": "repo_private == false (default-deny)",
+  "project": {
+    "org": "bounded-systems",
+    "number": 2,
+    "title": "Front Desk"
+  },
+  "items": [
+    {
+      "repo": "bounded-systems/agent-memory",
+      "number": 22,
+      "title": "chore(deps): bump the npm group across 1 directory with 3 updates",
+      "url": "https://github.com/bounded-systems/agent-memory/pull/22",
+      "labels": [
+        "dependencies",
+        "javascript"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/static-mcp",
+      "number": 41,
+      "title": "chore(deps): bump the npm group across 1 directory with 4 updates",
+      "url": "https://github.com/bounded-systems/static-mcp/pull/41",
+      "labels": [
+        "dependencies",
+        "javascript"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/verbspec-mcp",
+      "number": 31,
+      "title": "chore(deps): bump the bun group across 1 directory with 3 updates",
+      "url": "https://github.com/bounded-systems/verbspec-mcp/pull/31",
+      "labels": [
+        "dependencies",
+        "javascript"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/bounded-tools-mcp",
+      "number": 29,
+      "title": "chore(deps): bump the npm group across 1 directory with 4 updates",
+      "url": "https://github.com/bounded-systems/bounded-tools-mcp/pull/29",
+      "labels": [
+        "dependencies",
+        "javascript"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/site-mcp",
+      "number": 63,
+      "title": "deps: bump the npm group across 1 directory with 4 updates",
+      "url": "https://github.com/bounded-systems/site-mcp/pull/63",
+      "labels": [
+        "dependencies",
+        "javascript"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/prx",
+      "number": 1105,
+      "title": "chore(deps): bump the bun-minor-patch group across 1 directory with 9 updates",
+      "url": "https://github.com/bounded-systems/prx/pull/1105",
+      "labels": [
+        "dependencies"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/content-catalog",
+      "number": 71,
+      "title": "chore: refresh merged catalog (run 38257292464)",
+      "url": "https://github.com/bounded-systems/content-catalog/pull/71",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "not_measured",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/content-catalog",
+      "number": 73,
+      "title": "chore: refresh merged catalog (run 38401764062)",
+      "url": "https://github.com/bounded-systems/content-catalog/pull/73",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "not_measured",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/string-audit",
+      "number": 92,
+      "title": "chore(deps): bump the npm group across 1 directory with 3 updates",
+      "url": "https://github.com/bounded-systems/string-audit/pull/92",
+      "labels": [
+        "dependencies",
+        "javascript"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/site-mcp",
+      "number": 67,
+      "title": "deps: bump @modelcontextprotocol/sdk from 1.30.0 to 1.32.1",
+      "url": "https://github.com/bounded-systems/site-mcp/pull/67",
+      "labels": [
+        "dependencies",
+        "javascript"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/static-mcp",
+      "number": 45,
+      "title": "chore(deps): bump @modelcontextprotocol/sdk from 1.30.0 to 1.32.1",
+      "url": "https://github.com/bounded-systems/static-mcp/pull/45",
+      "labels": [
+        "dependencies",
+        "javascript"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/content-catalog",
+      "number": 74,
+      "title": "chore: refresh merged catalog (run 38551531154)",
+      "url": "https://github.com/bounded-systems/content-catalog/pull/74",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "not_measured",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/bounded-tools-mcp",
+      "number": 33,
+      "title": "chore(deps-dev): bump @modelcontextprotocol/sdk from 1.30.0 to 1.32.1",
+      "url": "https://github.com/bounded-systems/bounded-tools-mcp/pull/33",
+      "labels": [
+        "dependencies",
+        "javascript"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/content-catalog",
+      "number": 75,
+      "title": "chore: refresh merged catalog (run 38720275976)",
+      "url": "https://github.com/bounded-systems/content-catalog/pull/75",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "not_measured",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/content-catalog",
+      "number": 76,
+      "title": "chore: refresh merged catalog (run 38885845478)",
+      "url": "https://github.com/bounded-systems/content-catalog/pull/76",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "not_measured",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/static-mcp",
+      "number": 46,
+      "title": "chore(deps): bump proxy-addr from 2.0.7 to 2.0.8",
+      "url": "https://github.com/bounded-systems/static-mcp/pull/46",
+      "labels": [
+        "dependencies",
+        "javascript"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/site-mcp",
+      "number": 68,
+      "title": "deps: bump proxy-addr from 2.0.7 to 2.0.8",
+      "url": "https://github.com/bounded-systems/site-mcp/pull/68",
+      "labels": [
+        "dependencies",
+        "javascript"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/bounded-tools-mcp",
+      "number": 34,
+      "title": "chore(deps): bump proxy-addr from 2.0.7 to 2.0.8",
+      "url": "https://github.com/bounded-systems/bounded-tools-mcp/pull/34",
+      "labels": [
+        "dependencies",
+        "javascript"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/conformance-kit",
+      "number": 87,
+      "title": "ci: bump source-map-js from 1.2.1 to 1.2.2",
+      "url": "https://github.com/bounded-systems/conformance-kit/pull/87",
+      "labels": [
+        "dependencies",
+        "javascript"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/site",
+      "number": 287,
+      "title": "chore(deps-dev): bump the npm group across 1 directory with 4 updates",
+      "url": "https://github.com/bounded-systems/site/pull/287",
+      "labels": [
+        "dependencies",
+        "javascript"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/keycard",
+      "number": 32,
+      "title": "ci: bump serde_json from 1.0.151 to 1.0.154 in /tools in the cargo group",
+      "url": "https://github.com/bounded-systems/keycard/pull/32",
+      "labels": [
+        "dependencies",
+        "rust"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/content-catalog",
+      "number": 77,
+      "title": "chore: refresh merged catalog (run 39244203635)",
+      "url": "https://github.com/bounded-systems/content-catalog/pull/77",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "not_measured",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/hooksmith",
+      "number": 150,
+      "title": "chore(deps): bump schemars from 1.2.2 to 1.2.3 in the kube group",
+      "url": "https://github.com/bounded-systems/hooksmith/pull/150",
+      "labels": [
+        "dependencies",
+        "rust"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/conformance-kit",
+      "number": 88,
+      "title": "ci: bump postcss-selector-parser from 7.1.4 to 7.1.6",
+      "url": "https://github.com/bounded-systems/conformance-kit/pull/88",
+      "labels": [
+        "dependencies",
+        "javascript"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/content-catalog",
+      "number": 78,
+      "title": "chore: refresh merged catalog (run 39408376585)",
+      "url": "https://github.com/bounded-systems/content-catalog/pull/78",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "not_measured",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/string-audit",
+      "number": 94,
+      "title": "chore(deps): bump @modelcontextprotocol/server from 2.0.0 to 2.3.1",
+      "url": "https://github.com/bounded-systems/string-audit/pull/94",
+      "labels": [
+        "dependencies",
+        "javascript"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/content-catalog",
+      "number": 79,
+      "title": "chore: refresh merged catalog (run 39586523574)",
+      "url": "https://github.com/bounded-systems/content-catalog/pull/79",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "not_measured",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/content-catalog",
+      "number": 80,
+      "title": "chore: refresh merged catalog (run 39765312893)",
+      "url": "https://github.com/bounded-systems/content-catalog/pull/80",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "not_measured",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/content-catalog",
+      "number": 81,
+      "title": "chore: refresh merged catalog (run 39940244853)",
+      "url": "https://github.com/bounded-systems/content-catalog/pull/81",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "not_measured",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/content-catalog",
+      "number": 82,
+      "title": "chore: refresh merged catalog (run 40316791335)",
+      "url": "https://github.com/bounded-systems/content-catalog/pull/82",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "not_measured",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/content-catalog",
+      "number": 83,
+      "title": "chore: refresh merged catalog (run 40493958288)",
+      "url": "https://github.com/bounded-systems/content-catalog/pull/83",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "not_measured",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/content-catalog",
+      "number": 84,
+      "title": "chore: refresh merged catalog (run 40682166553)",
+      "url": "https://github.com/bounded-systems/content-catalog/pull/84",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "not_measured",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/content-catalog",
+      "number": 85,
+      "title": "chore: refresh merged catalog (run 40868681910)",
+      "url": "https://github.com/bounded-systems/content-catalog/pull/85",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/static-mcp",
+      "number": 48,
+      "title": "chore(deps): bump fast-uri from 3.1.5 to 3.1.9",
+      "url": "https://github.com/bounded-systems/static-mcp/pull/48",
+      "labels": [
+        "dependencies",
+        "javascript"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/site-mcp",
+      "number": 70,
+      "title": "deps: bump fast-uri from 3.1.5 to 3.1.9",
+      "url": "https://github.com/bounded-systems/site-mcp/pull/70",
+      "labels": [
+        "dependencies",
+        "javascript"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/bounded-tools-mcp",
+      "number": 36,
+      "title": "chore(deps): bump fast-uri from 3.1.5 to 3.1.9",
+      "url": "https://github.com/bounded-systems/bounded-tools-mcp/pull/36",
+      "labels": [
+        "dependencies",
+        "javascript"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/string-audit",
+      "number": 95,
+      "title": "chore(deps): bump fast-uri from 3.1.6 to 3.1.9",
+      "url": "https://github.com/bounded-systems/string-audit/pull/95",
+      "labels": [
+        "dependencies",
+        "javascript"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/content-catalog",
+      "number": 86,
+      "title": "chore: refresh merged catalog (run 41050292390)",
+      "url": "https://github.com/bounded-systems/content-catalog/pull/86",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/site",
+      "number": 288,
+      "title": "chore(deps-dev): bump undici from 7.29.0 to 7.30.1",
+      "url": "https://github.com/bounded-systems/site/pull/288",
+      "labels": [
+        "dependencies",
+        "javascript"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/static-mcp",
+      "number": 49,
+      "title": "chore(deps): bump ip-address from 10.4.0 to 10.7.5",
+      "url": "https://github.com/bounded-systems/static-mcp/pull/49",
+      "labels": [
+        "dependencies",
+        "javascript"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/static-mcp",
+      "number": 50,
+      "title": "chore(deps): bump body-parser from 2.3.0 to 2.4.0",
+      "url": "https://github.com/bounded-systems/static-mcp/pull/50",
+      "labels": [
+        "dependencies",
+        "javascript"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/bounded-tools-mcp",
+      "number": 37,
+      "title": "chore(deps): bump ip-address from 10.3.1 to 10.7.5",
+      "url": "https://github.com/bounded-systems/bounded-tools-mcp/pull/37",
+      "labels": [
+        "dependencies",
+        "javascript"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/site-mcp",
+      "number": 71,
+      "title": "deps: bump ip-address from 10.5.0 to 10.7.5",
+      "url": "https://github.com/bounded-systems/site-mcp/pull/71",
+      "labels": [
+        "dependencies",
+        "javascript"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/site-mcp",
+      "number": 72,
+      "title": "deps: bump body-parser from 2.3.0 to 2.4.0",
+      "url": "https://github.com/bounded-systems/site-mcp/pull/72",
+      "labels": [
+        "dependencies",
+        "javascript"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/bounded-tools-mcp",
+      "number": 38,
+      "title": "chore(deps): bump body-parser from 2.3.0 to 2.4.0",
+      "url": "https://github.com/bounded-systems/bounded-tools-mcp/pull/38",
+      "labels": [
+        "dependencies",
+        "javascript"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/conformance-kit",
+      "number": 89,
+      "title": "ci: bump fast-uri from 3.1.5 to 3.1.9",
+      "url": "https://github.com/bounded-systems/conformance-kit/pull/89",
+      "labels": [
+        "dependencies",
+        "javascript"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/conformance-kit",
+      "number": 90,
+      "title": "ci: bump undici from 6.28.0 to 6.29.1",
+      "url": "https://github.com/bounded-systems/conformance-kit/pull/90",
+      "labels": [
+        "dependencies",
+        "javascript"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/prx",
+      "number": 1109,
+      "title": "chore(deps): bump the github-actions group across 1 directory with 15 updates",
+      "url": "https://github.com/bounded-systems/prx/pull/1109",
+      "labels": [
+        "dependencies"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/conformance-kit",
+      "number": 91,
+      "title": "ci: bump ip-address from 10.3.1 to 10.7.5 in /integrity/verify",
+      "url": "https://github.com/bounded-systems/conformance-kit/pull/91",
+      "labels": [
+        "dependencies",
+        "javascript"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/conformance-kit",
+      "number": 92,
+      "title": "ci: bump ip-address from 10.4.0 to 10.7.5",
+      "url": "https://github.com/bounded-systems/conformance-kit/pull/92",
+      "labels": [
+        "dependencies",
+        "javascript"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/hooksmith",
+      "number": 153,
+      "title": "chore(deps): bump the cargo group across 1 directory with 14 updates",
+      "url": "https://github.com/bounded-systems/hooksmith/pull/153",
+      "labels": [
+        "dependencies",
+        "rust"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/content-catalog",
+      "number": 87,
+      "title": "chore: refresh merged catalog (run 41457508025)",
+      "url": "https://github.com/bounded-systems/content-catalog/pull/87",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/content-catalog",
+      "number": 88,
+      "title": "chore: refresh merged catalog (run 41641307723)",
+      "url": "https://github.com/bounded-systems/content-catalog/pull/88",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/static-mcp",
+      "number": 51,
+      "title": "chore(deps): bump zod from 4.4.3 to 4.6.7",
+      "url": "https://github.com/bounded-systems/static-mcp/pull/51",
+      "labels": [
+        "dependencies",
+        "javascript"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/brand",
+      "number": 73,
+      "title": "content: approve meta line shows chitin's verdict on the queuer",
+      "url": "https://github.com/bounded-systems/brand/pull/73",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/mint",
+      "number": 67,
+      "title": "ci: bump zod from 4.4.3 to 4.6.6",
+      "url": "https://github.com/bounded-systems/mint/pull/67",
+      "labels": [
+        "dependencies",
+        "javascript"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/site-mcp",
+      "number": 73,
+      "title": "deps: bump zod from 4.4.3 to 4.6.7",
+      "url": "https://github.com/bounded-systems/site-mcp/pull/73",
+      "labels": [
+        "dependencies",
+        "javascript"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/bounded-tools-mcp",
+      "number": 39,
+      "title": "chore(deps): bump zod from 4.4.3 to 4.6.7",
+      "url": "https://github.com/bounded-systems/bounded-tools-mcp/pull/39",
+      "labels": [
+        "dependencies",
+        "javascript"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/string-audit",
+      "number": 96,
+      "title": "chore(deps): bump zod from 4.4.3 to 4.6.7",
+      "url": "https://github.com/bounded-systems/string-audit/pull/96",
+      "labels": [
+        "dependencies",
+        "javascript"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/static-mcp",
+      "number": 52,
+      "title": "chore(deps): bump @hono/node-server from 2.0.12 to 2.1.6",
+      "url": "https://github.com/bounded-systems/static-mcp/pull/52",
+      "labels": [
+        "dependencies",
+        "javascript"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/bounded-tools-mcp",
+      "number": 40,
+      "title": "chore(deps): bump @hono/node-server from 2.0.12 to 2.1.6",
+      "url": "https://github.com/bounded-systems/bounded-tools-mcp/pull/40",
+      "labels": [
+        "dependencies",
+        "javascript"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/site-mcp",
+      "number": 74,
+      "title": "deps: bump @hono/node-server from 2.0.12 to 2.1.6",
+      "url": "https://github.com/bounded-systems/site-mcp/pull/74",
+      "labels": [
+        "dependencies",
+        "javascript"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/content-catalog",
+      "number": 89,
+      "title": "chore: refresh merged catalog (run 41837455886)",
+      "url": "https://github.com/bounded-systems/content-catalog/pull/89",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/content-catalog",
+      "number": 90,
+      "title": "chore: refresh merged catalog (run 42037152372)",
+      "url": "https://github.com/bounded-systems/content-catalog/pull/90",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/content-catalog",
+      "number": 91,
+      "title": "chore: refresh merged catalog (run 42224527364)",
+      "url": "https://github.com/bounded-systems/content-catalog/pull/91",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/gh-action-brand-checks",
+      "number": 16,
+      "title": "ci: bump the actions group across 1 directory with 4 updates",
+      "url": "https://github.com/bounded-systems/gh-action-brand-checks/pull/16",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/conformance-kit",
+      "number": 93,
+      "title": "ci: bump the actions group across 1 directory with 7 updates",
+      "url": "https://github.com/bounded-systems/conformance-kit/pull/93",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/facilities",
+      "number": 26,
+      "title": "ci: bump the actions group across 1 directory with 6 updates",
+      "url": "https://github.com/bounded-systems/facilities/pull/26",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/gh-action-node-uniqueness",
+      "number": 16,
+      "title": "ci: bump the actions group across 1 directory with 4 updates",
+      "url": "https://github.com/bounded-systems/gh-action-node-uniqueness/pull/16",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/baobab",
+      "number": 30,
+      "title": "ci: bump the actions group across 1 directory with 6 updates",
+      "url": "https://github.com/bounded-systems/baobab/pull/30",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/gh-action-contracts",
+      "number": 16,
+      "title": "ci: bump the actions group across 1 directory with 4 updates",
+      "url": "https://github.com/bounded-systems/gh-action-contracts/pull/16",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/cf-oidc-token-broker",
+      "number": 30,
+      "title": "ci: bump the actions group across 1 directory with 6 updates",
+      "url": "https://github.com/bounded-systems/cf-oidc-token-broker/pull/30",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/schema-bridge",
+      "number": 17,
+      "title": "ci: bump the actions group across 1 directory with 4 updates",
+      "url": "https://github.com/bounded-systems/schema-bridge/pull/17",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/drift-gate",
+      "number": 35,
+      "title": "ci: bump the actions group across 1 directory with 6 updates",
+      "url": "https://github.com/bounded-systems/drift-gate/pull/35",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/lima-devshell",
+      "number": 20,
+      "title": "ci: bump the actions group across 1 directory with 4 updates",
+      "url": "https://github.com/bounded-systems/lima-devshell/pull/20",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/scout-wire",
+      "number": 31,
+      "title": "ci: bump the actions group across 1 directory with 5 updates",
+      "url": "https://github.com/bounded-systems/scout-wire/pull/31",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/door-keeper",
+      "number": 48,
+      "title": "ci: bump the actions group across 1 directory with 8 updates",
+      "url": "https://github.com/bounded-systems/door-keeper/pull/48",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/concierge-wire",
+      "number": 21,
+      "title": "ci: bump the actions group across 1 directory with 4 updates",
+      "url": "https://github.com/bounded-systems/concierge-wire/pull/21",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/deploy",
+      "number": 26,
+      "title": "ci: bump the actions group across 1 directory with 7 updates",
+      "url": "https://github.com/bounded-systems/deploy/pull/26",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/dev-registry",
+      "number": 17,
+      "title": "ci: bump the actions group across 1 directory with 4 updates",
+      "url": "https://github.com/bounded-systems/dev-registry/pull/17",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/trust",
+      "number": 37,
+      "title": "ci: bump the actions group across 1 directory with 5 updates",
+      "url": "https://github.com/bounded-systems/trust/pull/37",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/site",
+      "number": 289,
+      "title": "ci: bump the actions group across 1 directory with 9 updates",
+      "url": "https://github.com/bounded-systems/site/pull/289",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/verify",
+      "number": 19,
+      "title": "ci: bump the actions group across 1 directory with 4 updates",
+      "url": "https://github.com/bounded-systems/verify/pull/19",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/claude-token-tools",
+      "number": 28,
+      "title": "ci: bump the actions group across 1 directory with 4 updates",
+      "url": "https://github.com/bounded-systems/claude-token-tools/pull/28",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/ci-workflows",
+      "number": 42,
+      "title": "ci: bump the actions group across 1 directory with 4 updates",
+      "url": "https://github.com/bounded-systems/ci-workflows/pull/42",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/git-ast",
+      "number": 67,
+      "title": "ci: bump the actions group across 1 directory with 6 updates",
+      "url": "https://github.com/bounded-systems/git-ast/pull/67",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/keycard",
+      "number": 33,
+      "title": "ci: bump the actions group across 1 directory with 5 updates",
+      "url": "https://github.com/bounded-systems/keycard/pull/33",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/door-kit",
+      "number": 55,
+      "title": "ci: bump the actions group across 1 directory with 7 updates",
+      "url": "https://github.com/bounded-systems/door-kit/pull/55",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/verbspec",
+      "number": 43,
+      "title": "ci: bump the actions group across 1 directory with 7 updates",
+      "url": "https://github.com/bounded-systems/verbspec/pull/43",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/content-catalog",
+      "number": 92,
+      "title": "ci: bump the actions group across 1 directory with 7 updates",
+      "url": "https://github.com/bounded-systems/content-catalog/pull/92",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/synoptic",
+      "number": 27,
+      "title": "ci: bump the actions group across 1 directory with 6 updates",
+      "url": "https://github.com/bounded-systems/synoptic/pull/27",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/fold-engine",
+      "number": 53,
+      "title": "ci: bump the actions group across 1 directory with 6 updates",
+      "url": "https://github.com/bounded-systems/fold-engine/pull/53",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/trellis-kit",
+      "number": 24,
+      "title": "ci: bump the actions group across 1 directory with 4 updates",
+      "url": "https://github.com/bounded-systems/trellis-kit/pull/24",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/env",
+      "number": 26,
+      "title": "ci: bump the actions group across 1 directory with 7 updates",
+      "url": "https://github.com/bounded-systems/env/pull/26",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/dev-contracts",
+      "number": 25,
+      "title": "ci: bump the actions group across 1 directory with 4 updates",
+      "url": "https://github.com/bounded-systems/dev-contracts/pull/25",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/static-mcp",
+      "number": 53,
+      "title": "ci: bump the actions group across 1 directory with 6 updates",
+      "url": "https://github.com/bounded-systems/static-mcp/pull/53",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/repo-health",
+      "number": 26,
+      "title": "ci: bump the actions group across 1 directory with 4 updates",
+      "url": "https://github.com/bounded-systems/repo-health/pull/26",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/verbspec-mcp",
+      "number": 32,
+      "title": "ci: bump the actions group across 1 directory with 7 updates",
+      "url": "https://github.com/bounded-systems/verbspec-mcp/pull/32",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/hooksmith",
+      "number": 154,
+      "title": "ci: bump the actions group across 1 directory with 13 updates",
+      "url": "https://github.com/bounded-systems/hooksmith/pull/154",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/frond",
+      "number": 19,
+      "title": "ci: bump the actions group across 1 directory with 4 updates",
+      "url": "https://github.com/bounded-systems/frond/pull/19",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/lone",
+      "number": 55,
+      "title": "ci: bump the actions group across 1 directory with 6 updates",
+      "url": "https://github.com/bounded-systems/lone/pull/55",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/content-catalog",
+      "number": 93,
+      "title": "chore: refresh merged catalog (run 42635235063)",
+      "url": "https://github.com/bounded-systems/content-catalog/pull/93",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/conformance",
+      "number": 51,
+      "title": "ci: bump the actions group across 1 directory with 7 updates",
+      "url": "https://github.com/bounded-systems/conformance/pull/51",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/agent-memory",
+      "number": 23,
+      "title": "ci: bump the actions group across 1 directory with 5 updates",
+      "url": "https://github.com/bounded-systems/agent-memory/pull/23",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/string-audit",
+      "number": 97,
+      "title": "ci: bump the actions group across 1 directory with 5 updates",
+      "url": "https://github.com/bounded-systems/string-audit/pull/97",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/cas",
+      "number": 30,
+      "title": "ci: bump the actions group across 1 directory with 10 updates",
+      "url": "https://github.com/bounded-systems/cas/pull/30",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/bounded.tools",
+      "number": 82,
+      "title": "ci: bump the actions group across 1 directory with 6 updates",
+      "url": "https://github.com/bounded-systems/bounded.tools/pull/82",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/verb-router",
+      "number": 11,
+      "title": "ci: Bump the actions group across 1 directory with 5 updates",
+      "url": "https://github.com/bounded-systems/verb-router/pull/11",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/installer",
+      "number": 24,
+      "title": "ci: bump the actions group across 1 directory with 10 updates",
+      "url": "https://github.com/bounded-systems/installer/pull/24",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/mint",
+      "number": 68,
+      "title": "ci: bump the actions group across 1 directory with 9 updates",
+      "url": "https://github.com/bounded-systems/mint/pull/68",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/trellis",
+      "number": 54,
+      "title": "ci: bump the actions group across 1 directory with 8 updates",
+      "url": "https://github.com/bounded-systems/trellis/pull/54",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/await-approval",
+      "number": 19,
+      "title": "ci: bump the actions group across 1 directory with 5 updates",
+      "url": "https://github.com/bounded-systems/await-approval/pull/19",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/bounded-tools-mcp",
+      "number": 41,
+      "title": "ci: bump the actions group across 1 directory with 6 updates",
+      "url": "https://github.com/bounded-systems/bounded-tools-mcp/pull/41",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/descriptor-kit",
+      "number": 20,
+      "title": "ci: bump the actions group across 1 directory with 7 updates",
+      "url": "https://github.com/bounded-systems/descriptor-kit/pull/20",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/brand",
+      "number": 74,
+      "title": "ci: bump the actions group across 1 directory with 10 updates",
+      "url": "https://github.com/bounded-systems/brand/pull/74",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/door-scout",
+      "number": 38,
+      "title": "ci: bump the actions group across 1 directory with 12 updates",
+      "url": "https://github.com/bounded-systems/door-scout/pull/38",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/fleet",
+      "number": 19,
+      "title": "ci: bump the actions group across 1 directory with 5 updates",
+      "url": "https://github.com/bounded-systems/fleet/pull/19",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/lobby",
+      "number": 18,
+      "title": "ci: bump the actions group across 1 directory with 5 updates",
+      "url": "https://github.com/bounded-systems/lobby/pull/18",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/door-peercred",
+      "number": 30,
+      "title": "ci: bump the actions group across 1 directory with 8 updates",
+      "url": "https://github.com/bounded-systems/door-peercred/pull/30",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/door-net",
+      "number": 38,
+      "title": "ci: bump the actions group across 1 directory with 9 updates",
+      "url": "https://github.com/bounded-systems/door-net/pull/38",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/guest-room",
+      "number": 92,
+      "title": "chore(deps): bump the github-actions group across 1 directory with 9 updates",
+      "url": "https://github.com/bounded-systems/guest-room/pull/92",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/ocap-provenance",
+      "number": 42,
+      "title": "ci: bump the actions group across 1 directory with 6 updates",
+      "url": "https://github.com/bounded-systems/ocap-provenance/pull/42",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/site-mcp",
+      "number": 75,
+      "title": "ci: bump the actions group across 1 directory with 12 updates",
+      "url": "https://github.com/bounded-systems/site-mcp/pull/75",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/door-concierge",
+      "number": 34,
+      "title": "ci: bump the actions group across 1 directory with 9 updates",
+      "url": "https://github.com/bounded-systems/door-concierge/pull/34",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/front-desk-scheduler",
+      "number": 203,
+      "title": "ci: bump the actions group across 1 directory with 9 updates",
+      "url": "https://github.com/bounded-systems/front-desk-scheduler/pull/203",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/keeper-wire",
+      "number": 23,
+      "title": "ci: bump the actions group across 1 directory with 5 updates",
+      "url": "https://github.com/bounded-systems/keeper-wire/pull/23",
+      "labels": [
+        "dependencies",
+        "github_actions"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/content-catalog",
+      "number": 94,
+      "title": "chore: refresh merged catalog (run 42828378529)",
+      "url": "https://github.com/bounded-systems/content-catalog/pull/94",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/content-catalog",
+      "number": 95,
+      "title": "chore: refresh merged catalog (run 43025621154)",
+      "url": "https://github.com/bounded-systems/content-catalog/pull/95",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/content-catalog",
+      "number": 96,
+      "title": "chore: refresh merged catalog (run 43233550145)",
+      "url": "https://github.com/bounded-systems/content-catalog/pull/96",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/static-mcp",
+      "number": 54,
+      "title": "chore(deps): bump hono from 4.13.1 to 4.13.18",
+      "url": "https://github.com/bounded-systems/static-mcp/pull/54",
+      "labels": [
+        "dependencies",
+        "javascript"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/bounded-tools-mcp",
+      "number": 42,
+      "title": "chore(deps): bump hono from 4.13.1 to 4.13.18",
+      "url": "https://github.com/bounded-systems/bounded-tools-mcp/pull/42",
+      "labels": [
+        "dependencies",
+        "javascript"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/site-mcp",
+      "number": 76,
+      "title": "deps: bump hono from 4.13.3 to 4.13.18",
+      "url": "https://github.com/bounded-systems/site-mcp/pull/76",
+      "labels": [
+        "dependencies",
+        "javascript"
+      ],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    },
+    {
+      "repo": "bounded-systems/content-catalog",
+      "number": 97,
+      "title": "chore: refresh merged catalog (run 43434178375)",
+      "url": "https://github.com/bounded-systems/content-catalog/pull/97",
+      "labels": [],
+      "claimed": false,
+      "claim_check": {
+        "state": "unknown",
+        "conclusion": null,
+        "url": null
+      }
+    }
+  ],
+  "item_count": 133,
+  "claim_counts": {
+    "compliant": 0,
+    "non_compliant": 0,
+    "not_measured": 13,
+    "pending": 0,
+    "unknown": 120
+  }
+}
